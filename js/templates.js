@@ -50,7 +50,8 @@ const HEAD_TMPLT =
 `<link rel="image_src" href="https://avfirsov.github.io/img/shareImg.jpg"/>
 <meta property="og:url" content="${window.location.href}">
 <meta property="og:site_name" content="YOUCANSOLVE.COM">
-<meta property="og:image" content="//avfirsov.github.io/img/shareImg.jpg">
+<meta property="og:image:secure_url" content="https://avfirsov.github.io/img/shareImg.jpg">
+<meta property="og:image" content="https://avfirsov.github.io/img/shareImg.jpg">
 <meta property="og:type" content="artice">
 <meta property="og:title" content="${document.title}">
 <meta property="og:description" content="${document.querySelector('meta[name="description"]').getAttribute("content")}">
