@@ -47,10 +47,12 @@ const COURSE_MAP =
   </div>`
 
 const HEAD_TMPLT = 
-`<meta property="og:url" content="${window.location.pathname}">
-<meta property="og:site_name" content="${window.location.pathname}">
+`<meta property="og:url" content="${window.location.href}">
+<meta property="og:site_name" content="${window.location.href}">
 <meta property="og:image" content="img/shareImg.jpg">
 <meta property="og:type" content="artice">
+<meta property="og:title" content="${document.title}">
+<meta property="og:description" content="${document.querySelector('meta[name="description"]').getAttribute("content")}">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">`
 
 
