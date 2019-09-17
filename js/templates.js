@@ -47,7 +47,7 @@ const COURSE_MAP =
   </div>`
 
 const HEAD_TMPLT = 
-`<link rel="image_src" href="img/shareImg.jpg" />
+`<link rel="image_src" href="https://avfirsov.github.io/img/shareImg.jpg"/>
 <meta property="og:url" content="${window.location.href}">
 <meta property="og:site_name" content="YOUCANSOLVE.COM">
 <meta property="og:image" content="//avfirsov.github.io/img/shareImg.jpg">
