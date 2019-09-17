@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 23. Уравниваем электроны. Множители баланса</h1>
+    <p>Давайте уравняем электроны в такой реакции:</p>
+    <div class="reaction" id="r1" data-options="{'electrons':{'P':{'P':-5},'H2SO4':{'S':2}}, 'editable':{'P':'always', 'H2SO4': 'always'}}">P + H2SO4 ⇒ H3PO4 + SO2 + H2O</div>
+    <div class="redoxBalance" data-options="{'balance':[['S',6,4],['P',0,5]], 'print':'deltaElectrons'}"></div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <p>В этой реакции уже придется поменять коэффициенты окислителю и восстановителю одновременно. Нетрудно догадаться, что нужные коэффициенты - 2 перед P и 5 перед <span>H2SO4</span>:</p>
+    <div class="reaction" id="r2" data-options="{'electrons':{'P':{'P':-5},'H2SO4':{'S':2}}}">2P + 5H2SO4 ⇒ H3PO4 + SO2 + H2O</div>
+    <div class="elementsTable" data-reaction="r2"></div>
+    <p>И теперь уже не составит труда доставить недостающие коэффициенты:</p>
+    <div class="reaction" id="r3" data-options="{'electrons':{'P':{'P':-5},'H2SO4':{'S':2}}}">2P + 5H2SO4 ⇒ 2H3PO4 + 5SO2 + 2H2O</div>
+    <div class="elementsTable" data-reaction="r3"></div>
+    <p>Обратите внимание на интересную закономерность:</p>
+    <ol>
+      <li>
+        <p>Восстановитель - P, отдает 5 электронов и ровно таков коэффициент перед окислителем H2SO4 и тем, во что он превратился - <span>SO2</span>.</p>
+      </li>
+      <li>
+        <p>Окислитель - H2SO4, принимает 2 электрона и ровно таков коэффициент перед восстановителем P и его продуктом - <span>H3PO4</span>.</p>
+      </li>
+    </ol>
+    <p>Такую же закономерность можно было наблюдать в реакциях серы и углерода с азотной кислотой из прошлого урока:</p>
+    <ul class="space">
+      <li>
+        <div class="reaction" data-options="{'electrons':{'S':{'S':-6},'HNO3':{'N':1}}}">S + 6HNO3 ⇒ H2SO4 + 6NO2 + 2H2O</div>
+        <div class="redoxBalance" data-options="{'balance':[['S',0,6],['N',5,4]], 'print':'deltaElectrons'}"></div>
+      </li>
+      <li>
+        <div id="r5" class="reaction" data-options="{'electrons':{'C':{'C':-4},'HNO3':{'N':1}}}">C + 4HNO3 ⇒ CO2 + 4NO2 + 2H2O</div>
+        <div class="redoxBalance" data-options="{'balance':[['N',5,4],['C',0,4]], 'print':'deltaElectrons'}"></div>
+      </li>
+    </ul>
+    <p>В этих трех реакциях можно было взять числа переносимых электронов, поменять их местами и сразу получить коэффициенты для окислителя, восстановителя и веществ, которые из них получаются, оставалось только подобрать коэффициент перед водой. Такая халява бывает часто, но не все ОВР уравниваются так просто.</p>
+    <h2>Множители баланса</h2>
+    <p>В оформлении электронного баланса есть одно правило. Числа, на которые надо домножить числа переносимых электронов чтобы добиться равенства, надо указать в балансе. Обычно, после продуктов проводят черту и за ней указывают эти числа:</p>
+    <ul class="space">
+      <li>
+        <div class="reaction" data-options="{'electrons':{'P':{'P':-5},'H2SO4':{'S':2}}}">2P + 5H2SO4 ⇒ 2H3PO4 + 5SO2 + 2H2O</div>
+        <div class="redoxBalance" data-options="{'balance':[['S',6,4],['P',0,5]], 'print':'multipliers'}"></div>
+      </li>
+      <li>
+        <div class="reaction" data-options="{'electrons':{'S':{'S':-6},'HNO3':{'N':1}}}">S + 6HNO3 ⇒ H2SO4 + 6NO2 + 2H2O</div>
+        <div class="redoxBalance" data-options="{'balance':[['S',0,6],['N',5,4]], 'print':'multipliers'}"></div>
+      </li>
+      <li>
+        <div class="reaction" data-options="{'electrons':{'C':{'C':-4},'HNO3':{'N':1}}}">C + 4HNO3 ⇒ CO2 + 4NO2 + 2H2O</div>
+        <div class="redoxBalance" data-options="{'balance':[['N',5,4],['C',0,4]], 'print':'multipliers'}"></div>
+      </li>
+    </ul>
+    <p>Это лишь один из вариантов оформления электронного баланса. Если вы оформите электронный баланс так, на экзамене к вам претензий точно не возникнет.</p>
+    <p>Числа, которые мы дописали в баланс, называются "<strong>множители баланса</strong>".</p>
+    <div class="remember">
+       <p>Множители баланса - это такие два числа, что если на них умножить число, сколько отдает электронов один атом восстановителя, и число, сколько принимает электронов один атом окислителя, то получатся одинаковые числа.</p>
+     </div> 
+    <p>Теперь мы можем сформулировать общие закономерности трех реакций так:</p>
+    <ol>
+      <li>
+        <p>Множители баланса находились простой перестановкой чисел переносимых электронов ("крест-на-крест").</p>
+      </li>
+      <li>
+        <p>Множители баланса совпадали с коэффициентами перед окислителем и восстановителем, а также продуктами, которые из них получаются.</p>
+      </li>
+    </ol>
+    <p>Множители баланса нужны чтобы выполнить второй этап метода электронного баланса - уравнять электроны, и для оформления электронного баланса. Если на экзамене вы не укажите их в электронном балансе, вам снимут баллы. Далеко не во всех ОВР множители баланса так легко находятся и конвертируются в коэффициенты. В дальнейших уроках мы рассмотрим ОВР, где множители баланса находятся иначе, чем простой перестановкой чисел, и где коэффициенты в уравнении будут отличаться от множителей баланса.</p>
+    <h2>Задачи</h2>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r4" class="reaction">P + HNO3 ⇒ H3PO4 + NO2 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-reaction="r4" data-options="{'balance':[['P',0,5],['N',5,4]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе окислитель и восстановитель</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

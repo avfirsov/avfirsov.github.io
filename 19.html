@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 19. Окислители и восстановители</h1>
+    <p>Возьмём реакцию из прошлого урока 2Al(0) + 3S(0) ⇒ Al(+3)2S(-2)3 и покажем на схеме как менялись степени окисления элементов:</p>
+    <div class="redoxBalance">
+      <table>
+        <tr>
+          <td class="initial">S(0)</td>
+          <!-- <td class="deltaElectrons filled">+2e(-)</td> -->
+          <td class="arrow">⟶</td>
+          <td class="final filled">S(-2)</td>
+          <!-- <td class="deltaElectronsVal"><div class="coefficient">3</div></td> -->
+          <!-- <td class="multiplier"><div class="reactionInput coefInput"><div class="inputControls"><div class="button"></div><input placeholder="1"><div class="button inactive"></div></div></div></td> -->
+        </tr>
+          <td class="initial">Al(0)</td>
+          <!-- <td class="deltaElectrons filled">-3e(-)</td> -->
+          <td class="arrow">⟶</td>
+          <td class="final filled">Al(+3)</td>
+          <!-- <td class="deltaElectronsVal"><div class="coefficient">2</div></td> -->
+          <!-- <td class="multiplier"><div class="reactionInput coefInput"><div class="inputControls"><div class="button"></div><input placeholder="1"><div class="button inactive"></div></div></div></td> -->
+        </tr>
+      </table>
+    </div>
+    <p>Обратите внимание, сера и алюминий поменяли степени окисления противоположным образом: алюминий увеличил свою с.о. с 0 до +3, а сера - понизила с 0 до -2. Это общее свойство всех ОВР - <em>в любой корректно составленной ОВР всегда есть как минимум один атом, который понижает свою степень окисления, и есть атом, который повышает с.о.</em></p> 
+    <p>У этих атомов есть специальные названия:</p>
+    <div class="remember">
+      <p>Атом, который понижает степень окисления, называется окислителем. Атом, который повышает степень окисления, называется восстановителем.</p>
+    </div>    
+    <p>В нашей реакции окислителем является S(0), а восстановителем является <span>Al(0)</span>. Наличие обоих участников - окислителя и восстановителя, обязательно для ОВР. Если не будет одного из участников - такая реакция не пойдет и ее невозможно уравнять. Помните, в одном из первых уроков была “неуравниваемая” реакция Fe2O3 + O2 ⇒ FeO? Причина ее "неуравниваемости" как раз в отсутствии одного из ключевых участников ОВР:</p>
+    Fe(+3)2O(-2)3 + O(0)2 ⇒ Fe(+2)O(-2)
+    <div class="redoxBalance">
+      <table>
+        <tr>
+          <th class="caption">Окислитель:</th>
+          <td class="initial">Fe(+3)</td>
+          <!-- <td class="deltaElectrons filled">+2e(-)</td> -->
+          <td class="arrow">⟶</td>
+          <td class="final filled">Fe(+2)</td>
+          <td class="deltaElectronsVal"><p><em>понизил степень окисления</em></p></td>
+          <!-- <td class="multiplier"><div class="reactionInput coefInput"><div class="inputControls"><div class="button"></div><input placeholder="1"><div class="button inactive"></div></div></div></td> -->
+        </tr>
+          <th class="caption">Окислитель:</th>
+          <td class="initial">O(0)</td>
+          <!-- <td class="deltaElectrons filled">-3e(-)</td> -->
+          <td class="arrow">⟶</td>
+          <td class="final filled">O(-2)</td>
+          <td class="deltaElectronsVal"><p><em>также понизил степень окисления</em></p></td>
+          <!-- <td class="multiplier"><div class="reactionInput coefInput"><div class="inputControls"><div class="button"></div><input placeholder="1"><div class="button inactive"></div></div></div></td> -->
+        </tr>
+      </table>
+      <div class="remember">
+        <p>Реакции, где есть только окислитель или только восстановитель невозможно уравнять. Такие реакции в реальной жизни не идут.</p>
+      </div>
+      <p>Схемы, которыми мы пользовались чтобы показать как меняются степени окисления в ходе реакции, называются <strong>электронным балансом</strong> и являются основой уравнивания ОВР с помощью <em>метода электронного баланса</em>.</p>
+      <div class="remember">
+        <p>Электронный баланс нужно составлять каждый раз, когда вы уравниваете ОВР</p>
+      </div>
+      <p>В заданиях №30 ЕГЭ и №20 ОГЭ если вы не запишите электронный баланс, вам снимут баллы, даже если вы при этом правильно уравняете реакцию. Поэтому наша ближайшая задача - научится составлять электронный баланс для любых ОВР. В остальных заданиях экзаменов писать электронный баланс не обязательно, достаточно чтобы вы правильно уравняли реакцию.</p>
+      <h2>Задачи</h2>
+      <div class="exercizes">
+        <div class="exercize">
+          <div class="container">
+            <div class="status"></div><div id="r1" class="reaction">CuSO4 + Fe ⇒ Cu + FeSO4</div>
+          </div>
+          <div class="redoxBalance" data-reaction="r1" data-options="{'balance':[['Cu',2,0],['Fe',0,2]]}"></div>
+          <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+          <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        </div>
+        <div class="exercize">
+          <div class="container">
+            <div class="status"></div><div id="r2" class="reaction">P + HNO3 ⇒ H3PO4 + NO2 + H2O</div>
+          </div>
+          <div class="redoxBalance" data-reaction="r2" data-options="{'balance':[['P',0,5],['N',5,4]]}"></div>
+          <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+          <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        </div>
+        <div class="exercize">
+          <div class="container">
+            <div class="status"></div><div id="r3" class="reaction">Zn + NaOH ⇒ Na2[Zn(OH)4] + H2</div>
+          </div>
+          <div class="redoxBalance" data-reaction="r3" data-options="{'balance':[['H',1,0],['Zn',0,2]]}"></div>
+          <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+          <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        </div>
+        <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="wrapper">
+            <p>Укажите, какие из перечисленных реакций являются неуравниваемыми:</p>
+            <ol>
+               <li>H2SO4 + S = SO2 + H2O</li>
+               <li>KCl + H2O = KClO3 + HCl</li>
+               <li>KMnO4 + SO2 + H2O = K2SO4 + H2SO4 + MnSO4</li>
+               <li>MnO2 + KOH = K2MnO4 + H2O</li>
+               <li>P2O5 + Ca = Ca3(PO4)2</li>
+             </ol> 
+             <p>Введите в поле номера правильных ответов по возрастанию:</p><div class="NumbersInputExercize" data-options="{'solution':'245'}"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

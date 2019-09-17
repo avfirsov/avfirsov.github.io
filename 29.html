@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 29. Реакции диспропорционирования и сопропорционирования</h1>
+    <p>Среди ОВР, отдельно выделяют реакции, где окислителем и восстановителем является один и тот же элемент. Вот пример такой реакции:</p>
+    <div class="reaction">H2S + SO2 ⇒ S + H2O</div>
+    <div class="redoxBalance" data-options="{'balance':[['S',-2,0],['S',4,0]], 'print':'multipliers'}"></div>
+    <h2>Диспропорционирование и сопропорционирование</h2>
+    <p>ОВР одного элемента протекают по одной из двух схем:</p>
+    <ol>
+      <li>
+        <p>Либо элемент переходит из двух степеней в одну (как в примере выше) - такие реакции называются <strong>сопропорционированием</strong>.</p>
+      </li>
+      <li>
+        <p>Либо элемент переходит из одной степени окисления в две разных новых степени окисления - такие реакции называются <strong>диспропорционированием</strong>.</p>
+      </li>
+    </ol>
+    <p>Пример реакции диспропорционирования:</p>
+    P + NaOH + H2O ⇒ PH3 + NaH2PO2 
+    <div class="redoxBalance" data-options="{'balance':[['P',0,-3],['P',0,1]], 'print':'multipliers'}"></div>
+    <h2>Как уравнивать</h2>
+    <p>Такие реакции уравниваются легко: по балансу находим коэффициенты для веществ с частицами, которые не повторяются в балансе, остальные коэффициенты находим подбором. В примере с серой, по балансу мы находим коэффициенты только для H2S и SO2, а остальные коэффициенты подбираем:</p>
+    2H2S + 1SO2 ⇒ S + H2O
+    <p class="note">Надо подобрать S и H2O</p>
+    <div class="redoxBalance" data-options="{'balance':[['S',-2,0],['S',4,0]], 'print':'multipliers'}"></div>
+    <p>Если попытаться применить множитель баланса в качестве коэффициента перед S(0), возникает неопределенность: S(0) присутствует и в первой строке баланса с множителем 2, и во второй строке баланса, с множителем 1. Какой из множителей выбрать в качестве коэффициента - непонятно. Поэтому поступим проще и подберем коэффициент перед S, а заодно и перед водой:</p>
+    2H2S + 1SO2 ⇒ 3S + 2H2O
+    <p>Аналогично уравнивается вторая реакция. По балансу находим коэффициенты перед PH3 и Na2HPO2:</p>
+    P + NaOH + H2O ⇒ 1PH3 + 3NaH2PO2 
+    <div class="redoxBalance" data-options="{'balance':[['P',0,-3],['P',0,1]], 'print':'multipliers'}"></div>
+    <p>Остальные коэффициенты легко находим подбором:</p>
+    4P + 3NaOH + 3H2O ⇒ 1PH3 + 3NaH2PO2 
+    <h2>Задачи</h2>
+    <p>Расставьте коэффициенты в следующих уравнениях:</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">FeCl3 + Fe ⇒ FeCl2</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">NO2 + H2O ⇒ HNO2 + HNO3</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">NaNO2 + (NH4)2SO4 ⇒ Na2SO4 + N2 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">S + NaOH ⇒ Na2S + Na2SO3 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">H2S + H2SO4 ⇒ SO2 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">S + H2SO4 ⇒ SO2 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">NaH + H2O ⇒ NaOH + H2</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">Cl2 + KOH ⇒ KCl + KClO + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">Br2 + NaOH ⇒ NaBr + NaBrO3 + H2O</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

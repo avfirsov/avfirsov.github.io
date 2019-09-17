@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 28. Дробные коэффициенты</h1>
+    <p>В некоторых реакциях если следовать нашему алгоритму, возникает необходимость поставить дробный коэффициент:</p>
+    KMnO4 + HCl ⇒ MnCl2 + Cl2 + KCl + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Cl',-1,0],['Mn',7,2]], 'print':'multipliers'}"></div>
+    <p>Проведем наши обычные рассуждения:</p>
+    <ol>
+      <li>
+        <p>Mn(+7) встречается в уравнении в 1 веществе - KMnO4, значит, коэффициент перед KMnO4 равен отношению множителя баланса к индексу для Mn(+7), что равно 1 / 1, т.е. 1:</p>
+        1KMnO4 + HCl ⇒ MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Mn(+2) встречается в уравнении в 1 веществе - MnCl2, значит, коэффициент перед MnCl2 равен отношению множителя баланса к индексу для Mn(+2), что равно 1 / 1, т.е. 1:</p>
+        1KMnO4 + HCl ⇒ 1MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Cl(-1) встречается в уравнении в 3 веществах - HCl, MnCl2 и KCl, значит, если будет нужно, для этих веществ коэффициенты найдем позже подбором.</p>
+        1KMnO4 + HCl ⇒ 1MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Cl(0) встречается в уравнении в 1 веществе - Cl2, значит, коэффициент перед Cl2 равен отношению множителя баланса к индексу для Cl(0), что равно 5 / 2, т.е. <span class="hl">2.5</span>:</p>
+        1KMnO4 + HCl ⇒ 1MnCl2 + <span class="hl">2.5</span>Cl2 + KCl + H2O
+      </li>
+    </ol>
+    <p>Как относиться к такому результату - об этом поговорим позже, а сейчас продолжим уравнивать реакцию дальше: коэффициент перед KCl находим по калию слева, коэффициент перед&nbsp;<span>HCl</span>&nbsp;-&nbsp;по хлору справа, коэффициент перед&nbsp;<span>H2O</span>&nbsp;-&nbsp;подбором.</p>
+    <div class="reaction" id="r1"><div class="compound"><div class="coefficient">1</div><div class="elem">K</div><div class="elem">Mn</div><div class="elem">O<sub>4</sub></div></div> + <div class="compound"><div class="coefficient">8</div><div class="elem">H</div><div class="elem">Cl</div></div> ⟶ <div class="compound"><div class="coefficient">1</div><div class="elem">Mn</div><div class="elem">Cl<sub>2</sub></div></div> + <div class="compound"><div class="coefficient">2.5</div><div class="elem">Cl<sub>2</sub></div></div> + <div class="compound"><div class="coefficient">1</div><div class="elem">K</div><div class="elem">Cl</div></div> + <div class="compound"><div class="coefficient">4</div><div class="elem">H<sub>2</sub></div><div class="elem">O</div></div></div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <p>Как видно, все сошлось даже с дробным коэффициентом.</p>
+    <h2>И что, прям так записывать уравнение?</h2>
+    <p>По правилам, дробные коэффициенты не запрещено использовать в уравнениях. Это не будет ошибкой, если вы запишите реакцию так. Главное - чтобы слева и справа было всех элементов поровну. Однако на практике дробные коэффициенты представляют неудобство. Я рекомендую от них избавляться. Для этого нужно в уравнении домножить каждый коэффициент на знаменатель дробного коэффициенты. Например, в нашем случае дробный коэффициент равняется 5 / 2. Знаменатель дроби - 2. Значит, надо домножить каждый коэффициент в уравнении на 2:</p>
+    <div class="reaction" id="r2">2KMnO4 + 16HCl ⇒ 2MnCl2 + 5Cl2 + 2KCl + 8H2O</div>
+    <div class="elementsTable" data-reaction="r2"></div>
+    <p>Но это если реакция уже уравнена с дробью. Если вы еще расставляете коэффициенты, лучше изначально предотвратить появление дробного коэффициента в уравнении.</p> 
+    <h2>Как избежать дробных коэффициентов</h2>
+    <p>Если расставляя коэффициенты возникает необходимость поставить дробный коэффициент, домножьте множители баланса на знаменатель дроби и начните расставлять коэффициенты с самого начала, с новыми, домноженными множителями баланса. На примере нашей реакции:</p>
+    KMnO4 + HCl ⇒ MnCl2 + Cl2 + KCl + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Cl',-1,0],['Mn',7,2]], 'print':'multipliers'}"></div>
+    <p>Проведем наши обычные рассуждения:</p>
+    <ol>
+      <li>
+        <p>Mn(+7) встречается в уравнении в 1 веществе - KMnO4, значит, коэффициент перед KMnO4 равен отношению множителя баланса к индексу для Mn(+7), что равно 1 / 1, т.е. 1:</p>
+        1KMnO4 + HCl ⇒ MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Mn(+2) встречается в уравнении в 1 веществе - MnCl2, значит, коэффициент перед MnCl2 равен отношению множителя баланса к индексу для Mn(+2), что равно 1 / 1, т.е. 1:</p>
+        1KMnO4 + HCl ⇒ 1MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Cl(-1) встречается в уравнении в 3 веществах - HCl, MnCl2 и KCl, значит, если будет нужно, для этих веществ коэффициенты найдем позже подбором.</p>
+        1KMnO4 + HCl ⇒ 1MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Cl(0) встречается в уравнении в 1 веществе - Cl2, значит, коэффициент перед Cl2 равен отношению множителя баланса к индексу для Cl(0), что равно 5 / 2, т.е. <span class="hl">2.5</span> - <strong>тут мы остановимся и умножим множители баланса на 2.. :</strong></p>
+      </li>
+    </ol>
+    KMnO4 + HCl ⇒ MnCl2 + Cl2 + KCl + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Cl',-1,0],['Mn',7,2]], 'print':'multipliers'}">
+      <table>
+        <tr>
+          <th class="caption">Окислитель:</th>
+          <td class="initial"><div class="elem">Mn<sup>+7</sup></div></td>
+          <td class="deltaElectrons filled">+5e<sup>-</sup></td>
+          <td class="arrow">⟶</td>
+          <td class="final filled"><div class="elem">Mn(+2)</div></td>
+          <td class="multiplier"><div class="coefficient">1</div></td>
+          <td class="multiplier" rowspan="2"><div class="coefficient">х2</div></td>
+          <td class="multiplier"><div class="coefficient">2</div></td>
+        </tr>
+        <tr>
+          <th class="caption">Восстановитель:</th>
+          <td class="initial"><div class="elem">Cl<sup>-1</sup></div></td>
+          <td class="deltaElectrons filled">-1e(-)</td>
+          <td class="arrow">⟶</td>
+          <td class="final filled"><div class="elem">Cl<sup>0</sup></div></td>
+          <td class="multiplier"><div class="coefficient">5</div></td>
+          <td class="multiplier"><div class="coefficient">10</div></td>
+        </tr>
+      </table>
+    </div>
+    <p class="note">(в чистовик это лучше не писать)</p>
+    <p><strong>..и начнем все с начала, с новыми множителями баланса:</strong></p>
+    <ol>
+      <li>
+        <p>Mn(+7) встречается в уравнении в 1 веществе - KMnO4, значит, коэффициент перед KMnO4 равен отношению множителя баланса к индексу для Mn(+7), что равно 2 / 1, т.е. 2:</p>
+        2KMnO4 + HCl ⇒ MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Mn(+2) встречается в уравнении в 1 веществе - MnCl2, значит, коэффициент перед MnCl2 равен отношению множителя баланса к индексу для Mn(+2), что равно 2 / 1, т.е. 2:</p>
+        2KMnO4 + HCl ⇒ 2MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Cl(-1) встречается в уравнении в 3 веществах - HCl, MnCl2 и KCl, значит, если будет нужно, для этих веществ коэффициенты найдем позже подбором.</p>
+        2KMnO4 + HCl ⇒ 2MnCl2 + Cl2 + KCl + H2O
+      </li>
+      <li>
+        <p>Cl(0) встречается в уравнении в 1 веществе - Cl2, значит, коэффициент перед Cl2 равен отношению множителя баланса к индексу для Cl(0), что равно 10 / 2, т.е. <span class="hl">5</span>:</p>
+        2KMnO4 + HCl ⇒ 2MnCl2 + 5Cl2 + KCl + H2O
+      </li>
+    </ol>
+    <p>Дальше делаем подбор оставшихся коэффициентов и готово.</p> 
+    <h2>Еще один пример</h2>
+    Fe2(SO4)3 + KI ⇒ FeSO4 + I2 + K2SO4
+    <div class="redoxBalance" data-options="{'balance':[['I',-1,0],['Fe',3,2]], 'print':'multipliers'}"></div>
+    <p>Начинаем перебирать частицы из электронного баланса:</p>
+    <ol>
+      <li>
+        <p>I(-1) встречается в уравнении в 1 веществе - KI, значит, коэффициент перед KI равен отношению множителя баланса к индексу для I(-1), что равно 1 / 1, т.е. 1:</p>
+        Fe2(SO4)3 + 1KI ⇒ FeSO4 + I2 + K2SO4
+      </li>
+      <li>
+        <p>I(0) встречается в уравнении в 1 веществе - I2, значит, коэффициент перед I2 равен отношению множителя баланса к индексу для I(0), что равно 1 / 2, т.е. <span class="hl">0.5</span> - <strong>останавливаемся и умножаем множители баланса на знаменатель дроби, на 2:</strong></p>
+      </li>
+    </ol>
+    <div class="redoxBalance" data-options="{'balance':[['Cl',-1,0],['Mn',7,2]], 'print':'multipliers'}">
+      <table>
+        <tr>
+          <th class="caption">Окислитель:</th>
+          <td class="initial">Fe(+3)</td>
+          <td class="deltaElectrons filled">+1e(-)</td>
+          <td class="arrow">⟶</td>
+          <td class="final filled">Fe(+2)</td>
+          <td class="multiplier"><div class="coefficient">1</div></td>
+          <td class="multiplier" rowspan="2"><div class="coefficient">х2</div></td>
+          <td class="multiplier"><div class="coefficient">2</div></td>
+        </tr>
+        <tr>
+          <th class="caption">Восстановитель:</th>
+          <td class="initial">I(-1)</td>
+          <td class="deltaElectrons filled">-1e(-)</td>
+          <td class="arrow">⟶</td>
+          <td class="final filled">I(0)</td>
+          <td class="multiplier"><div class="coefficient">1</div></td>
+          <td class="multiplier"><div class="coefficient">2</div></td>
+        </tr>
+      </table>
+    </div>
+    <p><strong>и начинаем все с самого начала:</strong></p>
+    <ol>
+      <li>
+        <p>I(-1) встречается в уравнении в 1 веществе - KI, значит, коэффициент перед KI равен отношению множителя баланса к индексу для I(-1), что равно 2 / 1, т.е. 2:</p>
+        Fe2(SO4)3 + 2KI ⇒ FeSO4 + I2 + K2SO4
+      </li>
+      <li>
+        <p>I(0) встречается в уравнении в 1 веществе - I2, значит, коэффициент перед I2 равен отношению множителя баланса к индексу для I(0), что равно 2 / 2, т.е. 1:</p>
+        Fe2(SO4)3 + 2KI ⇒ FeSO4 + 1I2 + K2SO4
+      </li>
+      <li>
+        <p>Fe(+3) встречается в уравнении в 1 веществе - Fe2(SO4)3, значит, коэффициент перед Fe2(SO4)3 равен отношению множителя баланса к индексу для Fe(+3), что равно 2 / 2, т.е. 1:</p>
+        1Fe2(SO4)3 + 2KI ⇒ FeSO4 + 1I2 + K2SO4
+      </li>
+      <li>
+        <p>Fe(+2) встречается в уравнении в 1 веществе - FeSO4, значит, коэффициент перед FeSO4 равен отношению множителя баланса к индексу для Fe(+2), что равно 2 / 1, т.е. 2:</p>
+        <div class="reaction" id="r3">1Fe2(SO4)3 + 2KI ⇒ 2FeSO4 + 1I2 + K2SO4</div>
+      </li>
+    </ol>
+    <p>Коэффициент по умолчанию перед K2SO4 является правильным, ничего доставлять не надо, реакция уравнена:</p>
+    <div class="elementsTable" data-reaction="r3"></div>   
+    <h2>Как оформлять</h2>
+    <p>На сколько мне известно, строгих регламентов на этот случай нет, но рекомендую записывать в чистовик первоначальный электронный баланс, до домножения множителей:</p>
+    <div class="redoxBalance" data-options="{'balance':[['Cl',-1,0],['Mn',7,2]], 'print':'multipliers'}"></div>
+    <h2>Задачи</h2>
+    <p>Расставьте коэффициенты в следующих уравнениях:</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">NH3 + CuO ⇒ Cu + N2 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">KI + H2SO4 ⇒ I2 + H2S + K2SO4 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">H2S + Cl2 + H2O ⇒ H2SO4 + HCl</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">Cr2O3 + NaNO3 + Na2CO3 ⇒ Na2CrO4 + NaNO2 + CO2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

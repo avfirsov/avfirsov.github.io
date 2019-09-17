@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 4. Не все реакции можно уравнять</h1>
+    <p>Даже если в продуктах и реагентах содержатся одинаковые элементы, это еще не значит, что реакцию можно уравнять. Ниже пример такой реакции, попробуйте подобрать в ней коэффициенты:</p>
+    <div class="reaction" id="r1" data-options="{'editable':'coeffsAllAlways'}">Fe2O3 + O2 ⇒ FeO</div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    
+    <p>Эту реакцию не уравнять никакими коэффициентами - слева кислорода всегда будет больше. Эту реакцию можно уравниваемой, если поменять местами два вещества:</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r2" data-options="{'solution':'coeffsAll','editable':'coeffsAllAlways'}">FeO + O2 ⇒ Fe2O3</div>
+        </div>
+          <div class="elementsTable" data-reaction="r2"></div>
+      </div>
+    </div>
+    <p>Попробуйте уравнять ее теперь.</p>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

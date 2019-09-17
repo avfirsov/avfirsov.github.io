@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 32. Реакции разложения</h1>
+    <p>Реакциями разложения называются реакции, когда из одного вещества образуется несколько других. Пример реакции разложения:</p>
+    Ca(OH)2 = CaO + H2O
+    <p>К большинству реакций разложения метод электронного баланса не применим по двум причинам:</p>
+    <ol>
+      <li>
+        <p>Либо это реакции не-ОВР, как в примере выше</p>
+      </li>
+      <li>
+        <p>Либо они ОВР, но метод электронного баланса для них не работает</p>
+      </li>
+    </ol>
+    <p>В обоих случаях реакции обычно легко уравниваются подбором. Но в реакциях разложения нитратов большинства металлов от Mg до Cu метод электронного баланса все же может пригодится. Рассмотрим реакцию разлодения нитрата меди <span>(II)</span>:</p>
+    Cu(NO3)2 ⇒ CuO + NO2 + O2
+    <div class="redoxBalance" data-options="{'balance':[['N',5,4],['O',-2,0]], 'print':'multipliers'}"></div>    
+    <p>Согласно нашему алгоритму, мы можем использовать множители баланса для N(+4) и O(0) для нахождения коэффициентов:</p>
+    Cu(NO3)2 ⇒ CuO + 4NO2 + 1O2
+    <p>Здесь мы сразу домножили множители баланса на 2, чтобы избежать дроби перед O(0)2. Оставшиеся коэффициенты находятся без труда:</p>
+    <div class="reaction" id="r1">2Cu(NO3)2 ⇒ 2CuO + 4NO2 + 1O2</div>
+    <div class="elementsTable" data-reaction="r1"></div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

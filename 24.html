@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 24. Подробнее про множители баланса</h1>
+    <p>В прошлом уроке мы ввели понятие “множители баланса” - это такие два числа, что если на них умножить число, сколько отдает электронов один атом восстановителя, и число, сколько принимает электронов один атом окислителя, то получатся одинаковые числа. До сих пор множители баланса находились простой перестановкой чисел. В этом уроке мы узнаем, что простая перестановка не всегда дает правильное решение. Рассмотрим реакцию серы с азотной кислотой:</p>
+    S + HNO3 ⇒ H2SO4 + NO
+    <p>Найдем множители баланса по правилу "крест-на-крест" и возьмем их в качестве коэффициентов, как это работало у нас в прошлом уроке:</p>
+    <div class="reaction" id="r1" data-options="{'electrons':{'S':{'S':-6},'HNO3':{'N':3}}}">3S + 6HNO3 ⇒ 3H2SO4 + 6NO</div>
+    <div class="redoxBalance" data-options="{'balance':[['N',5,2],['S',0,6]], 'print':'multipliers'}">
+      <table>
+        <tr>
+          <th class="caption">Окислитель:</th>
+          <td class="initial">N(+5)</td>
+          <td class="deltaElectrons filled">+3e(-)</td>
+          <td class="arrow">⟶</td>
+          <td class="final filled">N(+2)</td>
+          <td class="multiplier"><div class="coefficient">6</div></td>
+        </tr>
+        <tr>
+          <th class="caption">Восстановитель:</th>
+          <td class="initial">S(0)</td>
+          <td class="deltaElectrons filled">-6e(-)</td>
+          <td class="arrow">⟶</td>
+          <td class="final filled">S(+6)</td>
+          <td class="multiplier"><div class="coefficient">3</div></td>
+        </tr>
+      </table>
+    </div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <p>Видно, что уравнялись и электроны, и все элементы. Значит, найденные множители баланса подходят. Но если в этой реакции поделить множители баланса и все коэффициенты на 3, все будет также сходиться с другими числами:</p>
+    <div class="reaction" id="r2" data-options="{'electrons':{'S':{'S':-6},'HNO3':{'N':3}}}">3S + 6HNO3 ⇒ 3H2SO4 + 6NO</div>
+    <div class="redoxBalance" data-options="{'balance':[['N',5,2],['S',0,6]], 'print':'multipliers'}"></div>
+    <div class="elementsTable" data-reaction="r2"></div>
+    <p>По правилам, множители баланса и коэффициенты надо сокращать, если такая возможность есть. Если вы оставите коэффициенты или множители несокращенными, вам могут снять баллы. Ваши коэффициенты и множители баланса должны быть минимальными целыми числами из возможных. Поэтому впредь мы всегда будем сокращать множители баланса и коэффициенты, когда это возможно.</p>
+    <div class="remember">
+      <p>Если множители баланса или коэффициенты делятся без остатка на одно и тоже число, их необходимо сократить.</p>
+    </div>
+    <h2>Задачи</h2>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">KCl(+7)O4 + C(0) ⇒ KCl(-1) + C(+4)O2</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['C',0,4],['Cl',7,-1]]}"></div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">KCl(+5)O3 + S(0) ⇒ S(+4)O2 + KCl(-1)</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['S',0,4],['Cl',5,-1]]}"></div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">Cu + Fe2(SO4)3 ⇒ CuSO4 + FeSO4</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['Fe',3,2],['Cu',0,2]]}"></div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении</div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

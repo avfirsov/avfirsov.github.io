@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 31. Какой баланс в этой реакции?</h1>
+    <p>Еще одна реакция с интересным балансом. Попробуйте составить электронный баланс для нее:</p>
+    KMnO4 + H2O2 ⇒ O2 + MnO2 + KOH + H2O
+    <div class="wrapper">
+      <p id="ask1"><a href="javascript:void(0);" onclick="sol1.style.display='block'; ask1.style.display='none';">Проверить решение и продолжить урок</a></p>
+      <div class="solution" id="sol1">
+        <p>Давайте решим ее вместе. Расставим степени окисления и найдем кто из элементов как менял свои степени окисления:</p>
+        KMn(+7)O(-2)4 + H2O(-1)2 ⇒ O(0)2 + Mn(+2)O(-2)2 + KO(-2)H + H2O(-2)
+        <p>С марганцем все понятно: он принимает 5 электронов и переходит из Mn(+7) в Mn(+2). А с кислородом все не так просто: слева кислород представлен в двух с.о. - O(-2) в KMnO4 и O(-1) в H2O2. Справа кислород также в двух с.о.: O(0) в O2 и O(-2) в остальных веществах. Как кислород менял свою с.о.? Можно предложить 3 варианта как он мог это делать:</p>
+        <ol>
+          <li>
+            <p>O(-2) не менял степень окисления, а O(-1) перешел в O(-2). В этом случае электронный баланс выглядел бы так:</p>
+            <div class="redoxBalance" data-options="{'balance':[['Mn',7,2],['O',-1,0]], 'print':'multipliers'}"></div>    
+          </li>
+          <li>
+            <p>O(-2)&nbsp;(тот, что слева) переходил в O(0), а O(-1) переходил в O(-2)&nbsp;(в тот, что справа). Тогда баланс был бы таким:</p>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">Mn(+7)</td>
+                  <td class="deltaElectrons filled">+5e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Mn(+2)</td>
+    <!--               <td class="multiplier"><div class="coefficient">1</div></td>
+     -->            </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">O(-2)</td>
+                  <td class="deltaElectrons filled">-2e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">O(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">O(-1)</td>
+                  <td class="deltaElectrons filled">+1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">O(-2)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div></br>
+          </li>
+          <li>
+            <p>И O(-2), и O(-1) переходили в O(0). Баланс в этом случае:</p>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">Mn(+7)</td>
+                  <td class="deltaElectrons filled">+5e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Mn(+2)</td>
+    <!--               <td class="multiplier"><div class="coefficient">1</div></td>
+     -->            </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">O(-2)</td>
+                  <td class="deltaElectrons filled">-2e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">O(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">O(-1)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">O(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div></br>
+          </li>
+        </ol>
+        <p>Если знать свойства кислорода и перекиси водорода, можно догадаться, что правильным вариантом ответа будет будет первый электронный баланс, он же самый простой. Остальные варианты слишком сложны, чтобы быть реалистичными.</p>
+        <div class="remember">
+          <p>Если для реакции можно составить несколько разных электронных балансов, среди возможных вариантов следует выбрать простейший.</p>
+        </div>
+        <h2>Самый простой баланс не всегда простой</h2>
+        <p>Рассмотрим такой пример:</p>
+        FeS + KMnO4 + H2SO4 ⇒ Fe2(SO4)3 + S + MnSO4 + K2SO4 + H2O
+        <p>Расставим степени окисления у ключевых элементов:</p>
+        Fe(+2)S(-2) + KMn(+7)O4 + H2S(+6)O4 ⇒ Fe(+3)2(S(+6)O4)3 + S(0) + Mn(+2)S(+6)O4 + K2S(+6)O4 + H2O
+        <p>В этой реакции с серой ситуация обстоит как с кислородом в прошлом примере. Можно предположить 3 варианта того, что происходило со степенями окисления серы. Без лишних слов выпишем все возможные теоретически электронные балансы в этой реакции:</p>
+        <ol>
+          <li>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">Mn(+7)</td>
+                  <td class="deltaElectrons filled">+5e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Mn(+2)</td>
+    <!--               <td class="multiplier"><div class="coefficient">1</div></td>
+     -->            </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">Fe(+2)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Fe(+3)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">S(-2)</td>
+                  <td class="deltaElectrons filled">-2e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div>    
+          </li>
+          <li>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">Mn(+7)</td>
+                  <td class="deltaElectrons filled">+5e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Mn(+2)</td>
+    <!--               <td class="multiplier"><div class="coefficient">1</div></td>
+     -->            </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">Fe(+2)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Fe(+3)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">S(-2)</td>
+                  <td class="deltaElectrons filled">-2e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">S(+6)</td>
+                  <td class="deltaElectrons filled">+6e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div>   
+          </li>
+          <li>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">Mn(+7)</td>
+                  <td class="deltaElectrons filled">+5e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Mn(+2)</td>
+    <!--               <td class="multiplier"><div class="coefficient">1</div></td>
+     -->            </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">Fe(+2)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Fe(+3)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">S(-2)</td>
+                  <td class="deltaElectrons filled">-8e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(+6)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">S(+6)</td>
+                  <td class="deltaElectrons filled">+6e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(0)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div>  
+          </li>
+        </ol>
+        <p>Самый простой баланс здесь - первый, он же и правильный. Вообщем, думаю вы поняли, не стоит мудрить с электронным балансом.</p>
+        <p>Чтобы найти коэффициенты в этой реакции, надо воспользоваться приемом из прошлого урока и объединить строки с Fe(+2) и S(-2) в одну:</p>
+        <div class="redoxBalance">
+          <table>
+            <tr>
+              <th class="caption">Окислитель:</th>
+              <td class="initial">Mn(+7)</td>
+              <td class="deltaElectrons filled">+5e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">Mn(+2)</td>
+              <td class="multiplier"><div class="coefficient">3</div></td>
+            </tr>
+            <tr>
+              <th class="caption">Восстановитель:</th>
+              <td class="initial">Fe(+2)S(-2)</td>
+              <td class="deltaElectrons filled">-3e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">Fe(+3) + S(0)</td>
+              <td class="multiplier"><div class="coefficient">5</div></td>
+            </tr>
+          </table>
+        </div>
+        <p>Дальше, думаю понятно как уравнивать.</p>
+        <h2>И напоследок, еще один пример</h2>
+        Fe(+2)S(-2) + H2S(+6)O4 ⇒ Fe(+3)2(S(+6)O4)3 + S(+4)O2 + H2O
+        <p>Здесь та же самая ситуация с серой, как и в прошлом примере. Выпишем сразу все теоретически возможные балансы для этой реакции:</p>
+        <ol>
+          <li>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">Fe(+2)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Fe(+3)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">S(-2)</td>
+                  <td class="deltaElectrons filled">-6e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(+4)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div>    
+          </li>
+          <li>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">Fe(+2)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Fe(+3)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">S(-2)</td>
+                  <td class="deltaElectrons filled">-6e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(+4)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">S(+6)</td>
+                  <td class="deltaElectrons filled">+2e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(+4)</td>
+    <!--               <td class="multiplier"><div class="coefficient">1</div></td>
+     -->            </tr>
+              </table>
+            </div>   
+          </li>
+          <li>
+            <div class="redoxBalance">
+              <table>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">Fe(+2)</td>
+                  <td class="deltaElectrons filled">-1e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">Fe(+3)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Восстановитель:</th>
+                  <td class="initial">S(-2)</td>
+                  <td class="deltaElectrons filled">-8e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(+6)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+                <tr>
+                  <th class="caption">Окислитель:</th>
+                  <td class="initial">S(+6)</td>
+                  <td class="deltaElectrons filled">+2e(-)</td>
+                  <td class="arrow">⟶</td>
+                  <td class="final filled">S(+4)</td>
+                  <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+                </tr>
+              </table>
+            </div>  
+          </li>
+        </ol> 
+        <p>Самый простой баланс - первый, содержит ошибку: в нем нет окислителя! Поэтому он не может правильным быть и правильным может быть либо 2-й, либо 3-й баланс. Если присмотреться, в третьем балансе сера как бы делает своей степенью окисления “петлю”: она переходит из S(-2) в S(+6), чтобы потом из S(+6) перейти в S(+4). Чепуха какая-то! Здравый смысл подсказывает, что что-то здесь не так. В жизни элементы не ведут себя так бессмысленно и действуют напрямую: S(-2) сразу перешло бы в <span>S(+4)</span>.</p>
+        <p>С другой стороны, во втором балансе мы видим знакомое нам сопропорционирование. Именно этот вариант здесь и будет правильным. Теперь объединим в нем строки с S(-2) и <span>Fe(+2)</span> - имеем право, т.к. они в одном веществе - и получим баланс, по которому уже можно находить коэффициенты:</p>
+        <div class="redoxBalance">
+              <table>
+            <tr>
+              <th class="caption">Восстановитель:</th>
+              <td class="initial">Fe(+2)S(-2)</td>
+              <td class="deltaElectrons filled">-7e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">Fe(+3) + S(+4)</td>
+              <td class="multiplier"><div class="coefficient">2</div></td>
+            </tr>
+            <tr>
+              <th class="caption">Окислитель:</th>
+              <td class="initial">S(+6)</td>
+              <td class="deltaElectrons filled">+2e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">S(+4)</td>
+              <td class="multiplier"><div class="coefficient">7</div></td>
+            </tr>
+          </table>
+        </div>  
+        <h2>А это действительно встречается в экзаменах?</h2>
+        <p>Да, все приведенные примеры - реальные реакции из экзаменов. Хорошая новость в том, что подобные примеры попадаются нечасто и встречаются в номерах, где от вас не будут требовать оформления электронного баланса и будет достаточно, если вы их уравняете. Но на черновике баланс составить все равно придется - иначе будете долго уравнивать. </p>
+        <h2>Какая во всем этом логика? А в друг мне попадется что-то подобное, о чем здесь не было сказано?</h2>
+        <p>Не беспокойтесь, следуйте следующим 4 простым заповедям и все у вас получится:</p>
+        <ol>
+          <li>
+            <p>В балансе обязательно должны присутствовать окислитель и восстановитель.</p>
+          </li>
+          <li>
+            <p>Степень окисления в балансе не должна "петлять": не должно быть такого, что элемент перешел сначала в одну степень окисления, а из нее потом в третью. Вместо “петель”, перепишите баланс по схеме сопропорционирования или диспропорционирования.
+</p>
+          </li>
+          <li>
+            <p>Если теоретически можно составить больше 1 электронного баланса, удовлетворяющего правилам 1 и 2, выбирайте простейший.</p>
+          </li>
+          <li>
+            <p>Если у вас получилось два восстановителя - объедините эти строчки в баланса в одну.</p>
+          </li>
+        </ol>
+        <p><div class="reaction"><span>Так что Keep Calm and Do Electronic Balance!</span></div></p>
+        <h2>Задачи</h2>
+        <p>Расставьте коэффициенты в следующих уравнениях:</p>
+        <div class="exercizes">
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">KMnO4 + H2O2 ⇒ O2 + MnO2 + KOH + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">KClO4 + HCl ⇒ Cl2 + KCl + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">NaBrO2 + HBr ⇒ Br2 + NaBr + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">FeS + KMnO4 + H2SO4 ⇒ Fe2(SO4)3 + S + MnSO4 + K2SO4 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">FeS + H2SO4 ⇒ Fe2(SO4)3 + SO2 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">Cu2S + H2SO4 ⇒ CuSO4 + SO2 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':{'H2O2':5, 'KMnO4':2, 'H2SO4':3, 'O2':5, 'MnSO4':2, 'K2SO4':1, 'H2O':8}}">KMnO4 + H2O2 + H2SO4 ⇒ O2 + MnSO4 + K2SO4 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">Cu2S + KMnO4 + H2SO4 ⇒ CuSO4 + S + MnSO4 + K2SO4 + H2O</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

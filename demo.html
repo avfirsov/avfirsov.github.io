@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div><h1>Урок 26. Практика </h1>
+    <p>Расставьте коэффициенты в следующих уравнениях. Используйте свою тетрадь для нахождения степеней окисления и составления электронного баланса.</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">P + HNO3 + H2O⇒ H3PO4 + NO</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">PH3 + HNO3 ⇒ H3PO4 + NO + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" id="r1" data-options="{'solution':'coeffsAll','editable':'coeffsAllAlways', 'electrons':{'HNO3':{'N': 1}, 'Ca':{'Ca': -2}}}">Ca + HNO3 ⇒ Ca(NO3)2 + NO2 + H2O</div>
+        </div>
+        <div class="elementsTable" data-reaction="r1"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r3" class="reaction">Ca(0) + HN(+5)O3 ⇒ Ca(+2)(NO3)2 + N(+2)O + H2O</div>
+        </div>
+        <div class="redoxBalance" data-reaction="r3" data-options="{'balance':[['Ca',0,2],['N',5,2]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе окислитель и восстановитель</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':{'Ca':4,'HNO3':10,'Ca(NO3)2':4,'NH4NO3':1,'H2O':3}}">Ca + HNO3 ⇒ Ca(NO3)2 + NH4NO3 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" id="r2" data-options="{'solution':'oxiStatesAll'}"><div class="compound"><div class="elem">Mn<sup>+7</sup></div><div class="elem">O<sup>+7</sup><sub>4</sub></div><sup>-2</sup></div></div>
+        </div>
+        <div class="oxiStatesTable" data-reaction="r2"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" id="r4" data-options="{'solution':'coeffsAll'}">Ba(OH)2 + HNO3 ⇒ Ba(NO3)2 + H2O</div>
+        </div>
+        <div class="elementsTable" data-reaction="r4"></div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

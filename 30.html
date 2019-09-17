@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 30. Сразу два восстановителя в одной ОВР</h1>
+    <p>Попробуйте составить баланс для такой реакции:</p>
+    Cu2S + HNO3 ⇒ Cu(NO3)2 + H2SO4 + NO2 + H2O
+    <div class="wrapper">
+      <p id="ask1"><a href="javascript:void(0);" onclick="sol1.style.display='block'; ask1.style.display='none';">Проверить решение и продолжить урок</a></p>
+      <div class="solution" id="sol1">
+        <p>У вас должно было получиться так:</p>
+        Cu(+1)2S(-2) + HN(+5)O3 ⇒ Cu(+2)(NO3)2 + H2S(+6)O4 + N(+4)O2 + H2O
+        <div class="redoxBalance">
+          <table>
+            <tr>
+              <th class="caption">Окислитель:</th>
+              <td class="initial">N(+5)</td>
+              <td class="deltaElectrons filled">+1e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">N(+4)</td>
+<!--               <td class="multiplier"><div class="coefficient">1</div></td>
+ -->            </tr>
+            <tr>
+              <th class="caption">Восстановитель:</th>
+              <td class="initial">Cu(+1)</td>
+              <td class="deltaElectrons filled">-1e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">Cu(+2)</td>
+              <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+            </tr>
+            <tr>
+              <th class="caption">Восстановитель:</th>
+              <td class="initial">S(-2)</td>
+              <td class="deltaElectrons filled">-8e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">S(+6)</td>
+              <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+            </tr>
+          </table>
+        </div></br>
+        <img src="img/jackie.jpg" alt="джеки чан мем">
+        <p>Но как найти множители в таком балансе? Привычным нам способом это сделать не получится. Поэтому пойдем на хитрость: заметим, что оба восстановителя содержатся в одном веществе - Cu2S. Объединим их в одну строку:</p>
+        <div class="redoxBalance">
+          <table>
+            <tr>
+              <th class="caption">Окислитель:</th>
+              <td class="initial">N(+5)</td>
+              <td class="deltaElectrons filled">+1e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">N(+4)</td>
+              <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+            </tr>
+            <tr>
+              <th class="caption">Восстановитель:</th>
+              <td class="initial">Cu(+1)2S(-2)</td>
+              <td class="deltaElectrons filled">-10e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">2Cu(+2) + S(+6)</td>
+              <!-- <td class="multiplier"><div class="coefficient">1</div></td> -->
+            </tr>
+          </table>
+        </div>
+        <p>В этом балансе мы учли, что в Cu2S содержится 2 атома меди и 1 атом серы, поэтому вся молекула отдает 10 электронов. Найдем множители баланса:</p>
+        <div class="redoxBalance">
+          <table>
+            <tr>
+              <th class="caption">Окислитель:</th>
+              <td class="initial">N(+5)</td>
+              <td class="deltaElectrons filled">+1e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">N(+4)</td>
+              <td class="multiplier"><div class="coefficient">10</div></td>
+            </tr>
+            <tr>
+              <th class="caption">Восстановитель:</th>
+              <td class="initial">Cu(+1)2S(-2)</td>
+              <td class="deltaElectrons filled">-10e(-)</td>
+              <td class="arrow">⟶</td>
+              <td class="final filled">2Cu(+2) + S(+6)</td>
+              <td class="multiplier"><div class="coefficient">1</div></td>
+            </tr>
+          </table>
+        </div> 
+        <p>Теперь уравняем реакцию по нашему алгоритму, как если бы Cu2S был атомом. Из баланса найдем множители для Cu2S, Cu(NO3)2 и H2SO4 и <span>NO2</span>. Множитель баланса для Cu2S и будет его коэффициентом. Обратите внимание, для Cu(2+) коэффициент будет равен удвоенному множителю баланса, иначе медь не уравняется:</p>
+
+        1Cu2S + HNO3 ⇒ 2Cu(NO3)2 + 1H2SO4 + 10NO2 + H2O
+        <p>Остальные коэффициенты, как обычно, находим подбором:</p>
+        <div class="reaction" id="r1">1Cu2S + 14HNO3 ⇒ 2Cu(NO3)2 + 1H2SO4 + 10NO2 + 6H2O</div>
+        <div class="elementsTable" data-reaction="r1"></div>
+        <p>Приведенный способ решения не является мэйнстримом, а лишь фантазия автора. Но других способов уравнять эту реакцию, кроме как подбрать влоб, не существует. К счастью, такие реакции на экзаменах встречаются крайне редко.</p> 
+        <p>В данном примере нам повезло, что Cu(+1) и S(2-) находились в уравнении в одном веществе. Если бы это было не так, объединить строки было нельзя и оставалось бы подбирать коэффициенты наугад.</p>
+        <h2>Как такое оформлять?</h2>
+        <p>На этот вопрос нет точного ответа. Но к счастью, такие реакции никогда не попадаются в заданиях ЕГЭ и ОГЭ, где требуется оформление электронного баланса, поэтому будет достаточно если вы просто правильно найдете коэффициенты.</p>
+        <h2>Бывают ли еще реакции по типу этой?</h2>
+        <p>Да, подобным электронным балансом будут обладать реакции где сульфиды, бромиды, йодиды катионов Fe(2+), Cu(+1), Cr(2+) реагируют с сильными окислителями. Наверняка существуют реакции и с двумя окислителями одновременно, и с большим числом восстановителей/окислителей, но такие могут вам попасться только разве что когда вы будете делать кандидатскую диссертацию по химии - точно не в школе, и даже не в студенчестве. На практике, вам могут встретиться только реакции с двумя восстановителями и решаться они будут 1-в-1 как пример выше.</p>
+        <h2>Задачи</h2>
+        <p>Расставьте коэффициенты в следующих уравнениях:</p>
+        <div class="exercizes">
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">FeS + HNO3 ⇒ Fe(NO3)3 + H2SO4 + NO2 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">FeI2 + HNO3 ⇒ Fe(NO3)3 + I2 + NO2 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">FeBr2 + H2SO4 ⇒ Fe2(SO4)3 + Br2 + SO2 + H2O</div>
+            </div>
+          </div>
+          <div class="exercize">
+            <div class="container">
+              <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">CuI + H2SO4 ⇒ CuSO4 + I2 + SO2 + H2O</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 15. Металлы с переменной степенью окисления</h1>
+    <h2>Как найти степень окисления металла с переменной степенью окисления в соединении</h2>
+    <p>Fe, Cu, Mn и Cr могут иметь разные степени окисления в соединениях. С последними двумя мы уже встречались в предыдущих двух уроках, где они входили в составы анионов. Для этих 4 металлов не существует конкретных правил нахождения степеней окисления и их надо рассчитывать каждый раз по-своему, причем с этими металлами нужен особый подход: наши прежние способы могут для них не работать.</p>
+    <ol>
+      <li>
+        <p><strong>Если все остальные элементы в соединении имеют свои правила на степень окисления</strong> (прочие металлы с постоянной степенью окисления, F, O, H), то степень окисления металла с переменной с.о. (здесь и далее - степень окисления) находится по <a href="10.html#rule4" target="_blank">правилу №4</a>: расчитывается так, чтобы сумма всех с.о. получилась равной 0.</p>
+        <em>Примеры:</em>
+        <ul class="hr">
+          <li>
+            <div class="reaction" id="r1">Fe(+3)2O(-2)3</div>
+            <div class="oxiStatesTable" data-reaction="r1"></div>
+          </li>
+          <li>
+            <div class="reaction" id="r2">Fe(+2)O(-2)</div>
+            <div class="oxiStatesTable" data-reaction="r2"></div>
+          </li>
+          <li>
+            <div class="reaction" id="r3">Na(+1)Fe(+3)O(-2)2</div>
+            <div class="oxiStatesTable" data-reaction="r3"></div>
+          </li>
+          <li>
+            <div class="reaction" id="r4">K(+1)Mn(+7)O(-2)4</div>
+            <div class="oxiStatesTable" data-reaction="r4"></div>
+          </li>
+        </ul>
+        <p>В этих примерах Fe и Mn&nbsp;-&nbsp;единственные элементы, не прописанные в правилах, и их степени окисления легко находятся по принципу "чтобы в итоге получился 0".</p>
+      </li>
+      <li>
+        <p><strong>Если в соединении есть сразу несколько элементов, непрописанных в правилах.</strong></p>
+        <p>Рассмотрим вещество FeSO4. Правила нам говорят, что степени окисления серы, железа и кислорода в сумме дадут 0 и что у железа степень окисления положительная (как у всех металлов в соединениях). Но <em>чему степени окисления железа и серы равны по отдельности</em> - об этом правила молчат. Fe(+4)S(+4)O4, Fe(+3)S(+5)O4, Fe(+2)S(+6)O4, Fe(+1)S(+7)O4,... - во всех вариантах сумма степеней окисления равна 0, убедитесь сами:</p>
+        <div class="reaction" data-options="{'editable':{'FeSO4':['Fe', 'S']}}" id="r5">FeSO(-2)4</div>
+        <div class="oxiStatesTable" data-reaction="r5"></div>
+        <p>Какой из вариантов правильный? В правильном варианте SO4&nbsp;-&nbsp;анион из таблицы растворимости, а степень окисления серы в FeSO4 такая же, как в анионе SO4(2-) и равна&nbsp;+6:&nbsp;<span>Fe(+2)S(+6)O4</span>.</p>
+        <p>Рассмотрим другой пример - FeS. В теории, возможно бесконечно много вариантов степеней окисления железа и серы в FeS, которые не противоречат правилам - Fe(+1)S(-1), Fe(+2)S(-2), Fe(+3)S(-3), Fe(+4)S(-4),.. но правильным является именно тот, где сера является анионом из таблицы растворимости. В таблице растворимости присутствует атомарный анион S(2-), значит правильным будет вариант <span>Fe(+2)S(-2)</span>.</p>
+        <p>Обобщим два последних примера:</p>
+        <div class="remember"><p>Если в соединении с металлом с переменной с.о. присутствует элемент, не указанный в правилах, этот элемент входит в один из анионов таблицы растворимости.</p></div>
+        <p>Правило следует понимать так: если у вас такое вещество, то его состав можно представить условной формулой <span>Me(+)An(-)</span>, где <span>An(-)</span>&nbsp;-&nbsp;один из анионов таблицы растворимости.</p>
+        <p>Все элементы, кроме металла, должны целиком образовывать анион: в FeSO4 будет один анион SO4(2-), а не два аниона S(2-) и O(2-). Хотя в таблице растворимости присутствует анион S(2-), анион должен покрывать весь остаток формулы.</p>
+        <p><strong>Из этого правила есть одно исключение</strong> - FeS2, <em>пирит</em>, основной компонент железной руды. В нем у серы степень окисления не -2 как у аниона S(2-) в таблице растворимости, а -1. У железа, соответственно, степень окисления не +4, а +2:</p>
+        <span><strong>Так правильно:</strong> <div class="reaction" id="r6">Fe(+2)S(-1)2</div></span>
+        <div class="oxiStatesTable" data-reaction="r6"></div>
+        <span><strong>Так НЕ правильно:</strong> <div class="reaction" id="r7">Fe(+4)S(-2)2</div></span>
+        <div class="oxiStatesTable" data-reaction="r7"></div>
+        <p>Этот пример стоит запомнить - он довольно часто встречается в ЕГЭ и ОГЭ.</p>
+      </li>
+    </ol>
+    <h2>Задачи</h2>
+    <p>Расставьте степени окисления в следующих веществах:</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r8">MnF4</div>
+            <div class="oxiStatesTable" data-reaction="r8"></div>
+          </div>
+        </div>
+      </div>  
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r9">Cu2S</div>
+            <div class="oxiStatesTable" data-reaction="r9"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r10">CuS</div>
+            <div class="oxiStatesTable" data-reaction="r10"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r11">CrBr3</div>
+            <div class="oxiStatesTable" data-reaction="r11"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r12">FeI2</div>
+            <div class="oxiStatesTable" data-reaction="r12"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r13">CuI</div>
+            <div class="oxiStatesTable" data-reaction="r13"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r14">Fe2(SO4)3</div>
+            <div class="oxiStatesTable" data-reaction="r14"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r15">Cu3(PO4)2</div>
+            <div class="oxiStatesTable" data-reaction="r15"></div>
+          </div>
+        </div>
+      </div> 
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="wrapper">
+            <div class="reaction" data-options="{'solution':'oxiStatesAll'}" id="r16">Cr(NO3)2</div>
+            <div class="oxiStatesTable" data-reaction="r16"></div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

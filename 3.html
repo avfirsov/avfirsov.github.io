@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 3. Простейшие реакции</h1>
+    <h2>Что значит - "уравнять реакцию"?</h2>
+    <p>Рассмотрим уравнение Ba(OH)2 + 2HCl ⇒ BaCl2 + 2H2O.</p>
+    <p>Сосчитаем сколько атомов каждого элемента содержится в реагентах и продуктах. В реагентах присутствуют 4 элемента: Ba, O, H и Cl. Из тех же элементов состоят продукты. Теперь сосчитаем для каждого элемента сколько его атомов содержится в продуктах, а сколько - в реагентах.</p>
+    <ol>
+      <li><p><strong>Ba</strong>. В реагентах Ba содержиться только в молекуле Ba(OH)2 в количестве 1 атом (т.к. индекс у Ba не указан и, соответственно, равен 1). В продуктах Ba содержиться в BaCl2, его там тоже 1 атом.</p></li>
+      <li><p><strong>O.</strong>. В реагентах кислород встречается в Ba(OH)2, где его в сумме 2 атома. В продуктах кислород встречается в H2O. В одной молекуле H2O содержится 1 атом кислорода, но поскольку перед H2O стоит коэффициент 2, то в продуктах всего 2 молекулы H2O, содержащие по 1 атому кислорода каждая. Значит, всего в продуктах 2 атома O.</p></li>
+      <li><p><strong>H.</strong>. В реагентах H содержиться в сразу в двух веществах: в Ba(OH)2 в количестве 2 атома и в HCl в количестве 1 атом. Но поскольку перед HCl стоит коэффициент 2, то во всех молекулах HCl содержится 2 атома H, а всего в реагентах - 4 атома. В продуктах H встречается в составе H2O и всего его там тоже 4 атома.</p></li>
+      <li><p><strong>Cl</strong>. По аналогии, находим, что хлора в реагентах и продуктах содержится по 2 атома.</p></li>
+    </ol>
+    <p>Этот результат удобно представить в виде таблицы:</p>
+    <div class="reaction" id="r1">Ba(OH)2 + 2HCl ⇒ BaCl2 + 2H2O</div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <p>Вы можете покликать по цифрам в таблице, чтобы посмотреть откуда взялась конкретная цифра. Попробуйте это сделать.</p> 
+    <p>У нашего уравнения есть особенность. Для каждого элемента сумарное число его атомов в реагентах такое же, как в продуктах. Про такие уравнения говорят, что они “<strong>составлены верно</strong>”, или еще говорят “<strong>эта реакция уравнена</strong>”. Если какого либо элемента содержится в реагентах и продуктах не по ровну - то <strong>реакция не уравнена</strong>, или <strong>составлена неверно</strong>. Вот пример неуравненной реакции:</p>
+
+    <div class="reaction" id="r2" data-options="{'editable':{'H2O':'always'}}">Ba(OH)2 + H2SO4 ⇒ BaSO4 + H2O</div>
+    <div class="elementsTable" data-reaction="r2"></div>
+
+    <p>Как видно из таблицы, "не сходятся" водород и кислород: слева водорода содержится 4 атома, а справа - только 2. У кислорода: слева 6 атомов, а справа - 5. Эту реакцию можно легко уравнять, если поставить перед водой коэффициент 2. Попробуйте это сделать.</p>
+    <div class="remember"><p>Уравнять реакцию - значит подобрать в ней коэффициенты так, чтобы каждого элемента было поровну в реагентах и продуктах. </p></div>
+    <h2>Все ли реакции можно уравнять?</h2> 
+    <p>Нет, далеко не все. Например, если в реагентах есть элемент, которого нет в продуктах, такую реакцию невозможно уравнять. Вот пример “неуравниваемой реакции”:</p>
+    <div class="reaction" id="r3" data-options="{'editable':'coeffsAllAlways'}">Mg + H2O ⇒ MgO</div>
+    <div class="elementsTable" data-reaction="r3"></div>
+
+    <p>Видно, что в реагентах содержится водород, а в продуктах его нет. Это значит, что никакими коэффициентами эту реакцию не уравнять. Такие реакции в реальности либо не идут, либо в них участвуют еще какие-то вещества. Например, эту реакцию можно сделать уравниваемой, если дописать в продуктах <span>H2</span>:</p>
+    <div class="reaction" id="r4" data-options="{'editable':'coeffsAllAlways'}">Mg + H2O ⇒ MgO + H2</div>
+    <div class="elementsTable" data-reaction="r4"></div>
+
+    <p>После дописывания H2 реакция сразу уравнялась!</p> 
+
+    <h2>Задачи</h2>
+    <p>В трех реакциях ниже расставлены правильно все коэффициенты, кроме одного, который можно менять. Подберите этот коэффициент так, чтобы реакция уравнялась. Помните, что там где не указан индекс или коэффициент, его следует считать равным 1.</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r5" class="reaction" data-options="{'solution':{'NaOH':'coeffAlways'}}">FeCl3 + NaOH ⇒ Fe(OH)3 + 3NaCl</div>
+        </div>
+          <div class="elementsTable" data-reaction="r5"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r6" class="reaction" data-options="{'solution':{'NaCl':'coeffAlways'}}">Na2SO4 + BaCl2 ⇒ BaSO4 + NaCl</div>
+        </div>
+          <div class="elementsTable" data-reaction="r6"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r7" class="reaction" data-options="{'solution':{'H2O':'coeffAlways'}}">3KOH + H3PO4 ⇒ K3PO4 + H2O</div>
+        </div>
+          <div class="elementsTable" data-reaction="r7"></div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

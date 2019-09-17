@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 27. Финальный алгоритм</h1>
+    <p>В этом уроке мы доведем алгоритм до совершенства.</p>
+    <p>Давайте уравняем реакцию H2O2 + SO2 = H2SO4 по нашему алгоритму.</p>
+    <div class="redoxBalance" data-options="{'balance':[['S',4,6],['O',-1,-2]], 'print':'multipliers'}"></div>
+    <p>Рассмотрим по очереди все частицы, которые есть в балансе, и вещества в которых они содержатся:</p>
+    <ol>
+      <li>
+        <p>O(-1) встречается в уравнении в 1 веществе - H2O2, значит, коэффициент перед H2O2 совпадает с множителем баланса для O(-1) и равен 2:</p>
+        2H2O2 + SO2 = H2SO4
+      </li>
+      <li>
+        <p>O(-2) встречается в уравнении в 2 веществах - SO2 и H2SO4, значит, если будет нужно, для этих веществ коэффициенты найдем позже подбором.</p>
+      </li>
+      <li>
+        <p>S(+4) встречается в уравнении в 1 веществе - SO2, значит, коэффициент перед SO2 совпадает с множителем баланса для S(+4) и равен 1:</p>
+        2H2O2 + 1SO2 = H2SO4
+      </li>
+      <li>
+        <p>S(+6) встречается в уравнении в 1 веществе - H2SO4, значит, коэффициент перед H2SO4 совпадает с множителем баланса для S(+6) и равен 1:</p>
+        <div class="reaction" id="r1">2H2O2 + 1SO2 = 1H2SO4</div>
+      </li>
+    </ol>
+    <p>Наш алгоритм привел нас к неверному результату - водород и кислород не сходятся:</p>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <h2>Почему алгоритм не сработал?</h2>
+    <p>Алгоритм не сработал потому, что у кислорода в H2O<sub class="hl">2</sub> индекс отличен от 1. В прошлых уроках алгоритм работал, потому что у частиц, для которых мы приравнивали множители к коэффициентам, индексы в веществах были равны 1. Индексы в реакциях ниже выделены у частиц из баланса, которые встречаются в уравнении ровно 1 раз. У веществ, которые их содержат, коэффициенты совпадают с множителями баланса:</p>
+    <ul>
+      <li>Ca<sub class="hl">1</sub> + H2SO4 ⇒ Ca<sub class="hl">1</sub>SO4 + H2S<sub class="hl">1</sub> + H2O</li>
+      <li><div class="reaction"><div class="compound"><div class="elem">P<sub class="hl">1</sub></div><div class="elem">H<sub>3</sub></div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="elem">H<sub>3</sub></div><div class="elem">P</div></div></div><sub class="hl">1</sub>O4 + N<sub class="hl">1</sub>O2 + H2O</li>
+      <li><div class="reaction"><div class="compound"><div class="elem">P<sub class="hl">1</sub></div><div class="elem">H<sub>3</sub></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">S</div><div class="elem">O<sub>4</sub></div></div> ⟶ <div class="compound"><div class="elem">H<sub>3</sub></div><div class="elem">P</div></div></div><sub class="hl">1</sub>O4 + S<sub class="hl">1</sub>O2 + H2O</li>
+      <li>Fe<sub class="hl">1</sub> + HNO3 ⇒ Fe<sub class="hl">1</sub>(NO3)3 + N<sub class="hl">1</sub>O2 + H2O</li>
+      <li><div class="reaction"><div class="compound"><div class="elem">P<sub class="hl">1</sub></div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="elem">H<sub>3</sub></div><div class="elem">P</div></div></div><sub class="hl">1</sub>O4 + N<sub class="hl">1</sub>O + H2O</li>
+      <li><div class="reaction"><div class="compound"><div class="elem">P<sub class="hl">1</sub></div><div class="elem">H<sub>3</sub></div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="elem">H<sub>3</sub></div><div class="elem">P</div></div></div><sub class="hl">1</sub>O3 + N<sub class="hl">1</sub>O + H2O</li>
+      <li>Ca<sub class="hl">1</sub> + HNO3 ⇒ Ca<sub class="hl">1</sub>(NO3)2 + N<sub class="hl">1</sub>O2 + H2O</li>
+      <li>Ca<sub class="hl">1</sub> + HNO3 ⇒ Ca<sub class="hl">1</sub>(NO3)2 + N<sub class="hl">1</sub>O + H2O</li>
+      <li>Al<sub class="hl">1</sub> + HNO3 ⇒ Al<sub class="hl">1</sub>(NO3)3 + N<sub class="hl">1</sub>O2 + H2O</li>
+      <li>KMn<sub class="hl">1</sub>O4 + S<sub class="hl">1</sub>O2 + H2O ⇒ K2SO4 + Mn<sub class="hl">1</sub>SO4 + H2SO4</li>
+      <li>Ca<sub class="hl">1</sub> + HNO3 ⇒ Ca<sub class="hl">1</sub>(NO3)2 + N<sub class="hl">1</sub>H4NO3 + H2O</li>
+    </ul>
+    <h2>Более подробное объяснение</h2> 
+    <p>Множители баланса показывают, сколько надо взять атомов, чтобы электронов принималось и отдавалось по ровну. Если у атома в веществе индекс равен 1, то в каждой молекуле находится по 1 атому, а значит, число молекул должно совпадать с множителем баланса, значит коэффициент совпадает с множителем баланса. Если у атома в веществе индекс не равен 1, то в каждой молекуле содержится 2, 3, 4,.. или какой там индекс, атомов, а значит молекул надо будет взять меньше, чтобы общее число атомов совпало с множителем баланса, значит коэффициент не совпадает с множителем баланса.</p>
+    <h2>Как расставлять коэффициенты и не ошибаться?</h2> 
+    <p>Правильные коэффициенты должны делать так, чтобы для частиц из электронного баланса, которые встречается в уравнении 1 раз, количество атомов совпадало с множителем баланса. Поэтому наши правила по нахождению коэффициентов по балансу нуждаются в модификации:</p>
+    <div class="remember">
+      <ul>
+        <li>
+          <p>Если частица из электронного баланса встречается в уравнении более, чем в 1 веществе, коэффициент перед веществами с ней не связан с множителем баланса и находится подбором.</p>
+        </li>
+        <li>
+          <p>Если частица из электронного баланса встречается в уравнении в 1 веществе, коэффициент перед веществом с ней равен отношению множителя баланса к индексу этой частицы. Т.е. надо поставить такой коэффициент, чтобы число атомов этой частицы совпадало с множителем баланса.</p>
+        </li>
+      </ul>
+    </div>
+    <p>Попробуем решить последнюю реакцию с обновленными правилами:</p>
+    <ol>
+      <li>
+        <p>O(-1) встречается в уравнении в 1 веществе - H2O2, значит, коэффициент перед H2O2 равен отношению множителя баланса к индексу для O(-1), что равно 2 / 2, т.е. 1:</p>
+        1H2O<sub class="hl">2</sub> + SO2 = H2SO4
+      </li>
+      <li>
+        <p>O(-2) встречается в уравнении в 2 веществах - SO2 и H2SO4, значит, если будет нужно, для этих веществ коэффициенты найдем позже подбором.</p>
+      </li>
+      <li>
+        <p>S(+4) встречается в уравнении в 1 веществе - SO2, значит, коэффициент перед SO2 равен отношению множителя баланса к индексу для S(+4), что равно 1 / 1, т.е. 1:</p>
+        1H2O2 + 1S<sub class="hl">1</sub>O2 = H2SO4
+      </li>
+      <li>
+        <p>S(+6) встречается в уравнении в 1 веществе - H2SO4, значит, коэффициент перед H2SO4 равен отношению множителя баланса к индексу для S(+6), что равно 1 / 1, т.е. 1:</p>
+        1H2O2 + 1SO2 = 1H2S<sub class="hl">1</sub>O4
+      </li>
+    </ol>
+    <p>На этот раз мы получили правильные коэффициенты:</p>
+    <div class="reaction" id="r2">1H2O2 + 1SO2 = 1H2SO4</div>     
+    <div class="elementsTable" data-reaction="r2"></div>
+    <p>Приведенный алгоритм является окончательным. С ним вы можете уравнивать любые реакции ОВР и будете всегда получать правильный результат.</p>
+    <h2>Обновленный алгоритм в деле, еще один пример</h2>
+    <p>Уравняем с помощью обновленного алгоритма еще одну реакцию:</p>
+    Ca + HNO3 ⇒ Ca(NO3)2 + N2 + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Ca',0,2],['N',5,0]], 'print':'multipliers'}"></div>
+    <p>Рассмотрим каждую частицу из электронного баланса:</p>
+    <ol>
+      <li>
+        <p>N(+5) встречается в уравнении в 2 веществах - HNO3 и Ca(NO3)2, значит, если будет нужно, для этих веществ коэффициенты найдем позже подбором.</p>
+        Ca + HNO3 ⇒ Ca(NO3)2 + N2 + H2O
+      </li>
+      <li>
+        <p>N(0) встречается в уравнении в 1 веществе - N2, значит, коэффициент перед N2 равен отношению множителя баланса к индексу для N(0), что равно 2 / 2, т.е. 1:</p>
+        Ca + HNO3 ⇒ Ca(NO3)2 + 1N2 + H2O
+      </li>
+      <li>
+        <p>Ca(0) встречается в уравнении в 1 веществе - Ca, значит, коэффициент перед Ca равен отношению множителя баланса к индексу для Ca, что равно 5 / 1, т.е. 5:</p>
+        5Ca + HNO3 ⇒ Ca(NO3)2 + 1N2 + H2O
+      </li>
+      <li>
+        <p>Ca(+2) встречается в уравнении в 1 веществе - Ca(NO3)2, значит, коэффициент перед Ca(NO3)2 равен отношению множителя баланса к индексу для Ca(+2), что равно 5 / 1, т.е. 5:</p>
+        5Ca + HNO3 ⇒ 5Ca(NO3)2 + 1N2 + H2O
+      </li>
+    </ol>
+    <p>Теперь найдем подбором недостающие коэффициенты перед HNO3 и H2O. Коэффициент перед HNO3 подбираем по азоту справа, коэффициент перед <span>H2O</span> - по водороду слева:</p>
+    <div class="reaction" id="r3">5Ca + 12HNO3 ⇒ 5Ca(NO3)2 + 1N2 + 6H2O</div>     
+    <div class="elementsTable" data-reaction="r3"></div>
+    <p>Готово, все сошлось!</p>
+    <h2>Как неправильно записывать электронный баланс</h2>
+    <p>В некоторых пособиях учат записывать в балансе частицы сразу с индексами, т.е. в нашем случае баланс в первой реакции выглядел бы так:</p>
+    H2O2 + SO2 ⇒ H2SO4
+    <div class="redoxBalance" data-options="{'balance':[['N',5,2],['S',0,6]], 'print':'multipliers'}">
+      <table>
+        <tr>
+          <th class="caption">Окислитель:</th>
+          <td class="initial">O(-1)<sub class="hl">2</sub></td>
+          <td class="deltaElectrons filled">+<div class="reaction"><div class="compound"><div class="coefficient hl">2</div>e<sup>-</sup></div></div></td>
+          <td class="arrow">⟶</td>
+          <td class="final filled">O(-2)</td>
+          <td class="multiplier"><div class="coefficient hl">1</div></td>
+        </tr>
+        <tr>
+          <th class="caption">Восстановитель:</th>
+          <td class="initial">S(+4)</td>
+          <td class="deltaElectrons filled">-2e(-)</td>
+          <td class="arrow">⟶</td>
+          <td class="final filled">S(+6)</td>
+          <td class="multiplier"><div class="coefficient">1</div></td>
+        </tr>
+      </table>
+    </div>
+    <p>Лично я считаю такой способ запутанным и гораздо менее удобным, чем изложенный мной. Более того, не все экзаменаторы принимают такой электронный баланс - вам могут снизить баллы за такую запись на ЕГЭ или ОГЭ. Поэтому ни здесь, ни далее пользоваться таким способом я не буду и вам не советую.</p>
+
+    <h2>Что дальше?</h2>
+    <p>Вы можете выучить алгоритм в таком виде и начинать уравнивать реакции на практике, но я бы рекомендовал вам пройти оставшиеся уроки: в них мы разберем неочевидные подводные камни, которые могут вам встретится. Мы поговорим, про дробные коэффициенты и реакции, где составить электронный баланс само по себе является непростой задачей.</p>
+    <h2>Задачи</h2>
+    <p>Расставьте коэффициенты в следующих уравнениях:</p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">NH3 + CuO ⇒ Cu + N2 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">KI + H2SO4 ⇒ I2 + H2S + K2SO4 + H2O</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">H2S + Cl2 + H2O ⇒ H2SO4 + HCl</div>
+        </div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction" data-options="{'solution':'coeffsAll'}">Cr2O3 + NaNO3 + Na2CO3 ⇒ Na2CrO4 + NaNO2 + CO2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

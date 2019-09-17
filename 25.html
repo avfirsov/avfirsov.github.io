@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 25. Множители баланса и коэффициенты в уравнении</h1>
+    <p>В прошлых уроках множители баланса совпадали с коэффициентами перед окислителем, восстановителем и их продуктами. Но так бывает далеко не всегда:</p>
+    Zn + H2SO4 ⇒ ZnSO4 + S + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Zn',0,2],['S',6,0]], 'print':'multipliers'}"></div>
+    <p>Воспользуемся множителями баланса в качестве коэффициентов. Поставим коэффициенты 3 перед Zn и ZnSO4 и коэффициенты&nbsp;1 перед&nbsp;S&nbsp;и&nbsp;<span>H2SO4</span>:</p> 
+    <div class="reaction" id="r1" data-options="{'editable':{'H2O':'always'}}">3Zn + H2SO4 ⇒ 3ZnSO4 + S + H2O</div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <p>Никакой коэффициент перед H2O не сделает эту реакцию уравниваемой: слева серы всегда будет 1 атом, а справа - 4 атома.</p> 
+    <h2>Почему реакция не уравнялась?</h2>
+    <p>Все дело в том, что в этой реакции, в отличие от предыдущих, <em>не все атомы окислителя изменили степень окисления</em> - часть атомов S(+6) сохраняет степень окисления и идет в <span>ZnSO4</span>:</p>
+    <div class="reaction"><div class="compound"><div class="elem">Zn</div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">S<sup class="hl">+6</sup></div><div class="elem">O<sub>4</sub></div></div> ⟶ <div class="compound"><div class="elem">Zn</div><div class="elem">S<sup class="hl">+6</sup></div><div class="elem">O<sub>4</sub></div></div> + <div class="compound"><div class="elem">S<sup class="hl">0</sup></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">O</div></div></div>
+    <p>Когда мы ставим коэффициент 1 перед <span>H2SO4</span>, мы не учитываем те атомы серы, которые пошли в <span>ZnS(+6)O4</span>. Давайте попробуем их учесть. Чтобы серы слева и справа стало поровну, надо поставить перед H2SO4 коэффициент 4, после чего остается только подобрать коэффициент 4 перед водой:</p>
+    <div class="reaction" id="r2">3Zn + 4H2SO4 ⇒ 3ZnSO4 + S + 4H2O</div>
+    <div class="elementsTable" data-reaction="r2"></div>
+    <p>С множителями не совпали коэффиенты только перед веществами с S(+6). Коэффициенты перед веществами с Zn(0), Zn(+2), S(0) все еще равны множителям баланса для этих частиц.</p> 
+    <p>Давайте посмотрим, что было бы, не будь в продуктах S(+6). Уберем S(+6) из продуктов, заменив ZnSO4 на ZnO. Это не повлияет на электронный баланс, но повлияет на коэффициенты в уравнении:</p>
+    Zn + H2SO4 ⇒ ZnO + S + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Zn',0,2],['S',6,0]], 'print':'multipliers'}"></div>
+    <p>Теперь все атомы окислителя и восстановителя меняют свои степени окисления и множители баланса совпадают с правильными коэффициентами для Zn, ZnO, S,&nbsp;<span>H2SO4</span>:</p>
+    <div class="reaction" id="r3">3Zn + H2SO4 ⇒ 3ZnO + S + H2O</div>
+    <div class="redoxBalance" data-options="{'balance':[['Zn',0,2],['S',6,0]], 'print':'multipliers'}"></div>
+    <div class="elementsTable" data-reaction="r3"></div>
+    <h2>Как тогда правильно расставлять коэффициенты?</h2>
+    <p>Также, как и раньше, только теперь каждый раз проверять, не встречается ли частица из баланса в уравнении где-то еще. Совпадут множители с коэффициентами, или нет, зависит от того, есть ли в балансе частицы, которые встречаются в уравнении более, чем в 1 веществе. Если частица из баланса встречается в уравнении более, чем в 1 веществе, то коэффициенты перед веществами с этой частицей находятся подбором в конце. Если частица из баланса встречается в уравнении в 1 веществе, коэффициент перед веществом с этой частицей совпадает с множителем баланса.</p> 
+    <span class="note">Примечание: на самом деле, даже если частица встречается в 1 веществе в уравнении, коэффициент также может не совпадать с множителем. Есть еще одно условие, о котором мы узнаем через урок. В этом и следующем уроках множители будут совпадать с коэффициентами, если частица встречается в уравнении 1 раз.</span> 
+    <div class="remember">
+      <p>Если частица из электронного баланса встречается в уравнении более, чем в 1 веществе, то коэффициенты перед веществами с этой частицей могут отличаться от ее множителя баланса и находятся подбором.</p>
+    </div>
+    <p>Для закрепления сделаем еще одно уравнение:</p>
+    Fe + HNO3 ⇒ Fe(NO3)3 + NO2 + H2O
+    <div class="redoxBalance" data-options="{'balance':[['Fe',0,3],['N',5,4]], 'print':'multipliers'}"></div>
+    <p>Рассмотрим по отдельности каждую частицу из электронного баланса и посмотрим, в каких веществах она встречается:</p>
+    <ol>
+      <li>
+        <p>Fe(0)&nbsp;-&nbsp;встречается в уравнении в 1 веществе, в <span>Fe</span>. Значит, перед <span>Fe</span> будет коэффициент, равный множителю баланса - 1:</p>
+        <div class="reaction" id="r4"><div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="elem">Fe</div>(<div class="elem">N</div><div class="elem">O<sub>3</sub></div>)<sub>3</sub></div> + <div class="compound"><div class="elem">N</div><div class="elem">O<sub>2</sub></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">O</div></div></div>
+      </li>
+      <li>
+        <p>Fe(+3)&nbsp;-&nbsp;встречается в уравнении в 1 веществе, в <span>Fe(NO3)3</span>. Значит, коэффициент перед Fe(NO3)3 совпадает с множителем и равен 1:</p>
+        <div class="reaction" id="r4"><div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div>(<div class="elem">N</div><div class="elem">O<sub>3</sub></div>)<sub>3</sub></div> + <div class="compound"><div class="elem">N</div><div class="elem">O<sub>2</sub></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">O</div></div></div>
+      </li>
+      <li>
+        <p>N(+4)&nbsp;-&nbsp;встречается в уравнении в 1 веществе, в <span>NO2</span>. Значит, коэффициент перед <span>NO2</span> совпадает с множителем и равен 3:</p>
+        <div class="reaction" id="r4"><div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div>(<div class="elem">N</div><div class="elem">O<sub>3</sub></div>)<sub>3</sub></div> + <div class="compound"><div class="coefficient hl">3</div><div class="elem">N</div><div class="elem">O<sub>2</sub></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">O</div></div></div>
+      </li>
+      <li>
+        <p>N(+5) - встречается в уравнении в двух веществах: в HNO3 и Fe(NO3)3. Значит, коэффициенты перед этими веществами не трогаем:</p>
+        <div class="reaction" id="r4"><div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div></div> + <div class="compound"><div class="elem">H</div><div class="elem">N</div><div class="elem">O<sub>3</sub></div></div> ⟶ <div class="compound"><div class="coefficient hl">1</div><div class="elem">Fe</div>(<div class="elem">N</div><div class="elem">O<sub>3</sub></div>)<sub>3</sub></div> + <div class="compound"><div class="coefficient hl">3</div><div class="elem">N</div><div class="elem">O<sub>2</sub></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">O</div></div></div>
+      </li>
+    </ol>
+    <p>Остается подобрать коэффициенты перед HNO3 и <span>H2O</span>. Коэффициент перед HNO3 подбираем по азоту справа, коэффициент перед H2O - по водороду слева.</p>
+    <div class="reaction" id="r4">1Fe + 6HNO3 ⇒ 1Fe(NO3)3 + 3NO2 + 3H2O</div>
+    <div class="elementsTable" data-reaction="r4"></div>
+    <p><strong>Примерно так надо рассуждать каждый раз, когда уравниваете ОВР:</strong> надо по очереди взять все частицы из баланса, посмотреть в каких веществах они содержатся в уравнении, и пропустить те частицы, которые содержатся сразу в нескольких веществах, а для оставшихся частиц взять множители баланса в качестве коэффициентов. Порядок обхода частиц значения не имеет - мы могли бы начать с N(+5), результат был бы таким же.</p>
+    <h2>Задачи</h2>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">PH3 + HNO3 ⇒ H3PO4 + NO2 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['P',-3,5],['N',5,4]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':{'PH3':1, 'HNO3':8, 'H3PO4':1, 'NO2':8, 'H2O':1}, 'editable':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении перед веществами, содержащими атомы окислителя и восстановителя в неповторяющихся степенях окисления</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты перед остальными веществами в уравнении</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">PH3 + H2SO4 ⇒ H3PO4 + SO2 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['P',-3,5],['S',6,4]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':{'PH3':1, 'H2SO4':4, 'H3PO4':1, 'SO2':4, 'H2O':1}, 'editable':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении перед веществами, содержащими атомы окислителя и восстановителя в неповторяющихся степенях окисления</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты перед остальными веществами в уравнении</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">Al + HNO3 ⇒ Al(NO3)3 + NO2 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['Al',0,3],['N',5,4]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':{'Al':1, 'HNO3':1, 'NO2':3, 'Al(NO3)3':1, 'H2O':1}, 'editable':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении перед веществами, содержащими атомы окислителя и восстановителя в неповторяющихся степенях окисления</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты перед остальными веществами в уравнении</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">Ca + H2SO4 ⇒ CaSO4 + H2S + H2O</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['Ca',0,2],['S',6,-2]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':{'Ca':4, 'H2SO4':1, 'CaSO4':4, 'H2S':1, 'H2O':1}, 'editable':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении перед веществами, содержащими атомы окислителя и восстановителя в неповторяющихся степенях окисления</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты перед остальными веществами в уравнении</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div class="reaction">KMnO4 + SO2 + H2O ⇒ K2SO4 + MnSO4 + H2SO4</div>
+        </div>
+        <div class="redoxBalance" data-options="{'balance':[['S',4,6],['Mn',7,2]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+        <div class="subExercize" data-options="{'solution':'deltaElectrons'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе как меняется число электронов у окислителя и восстановителя</div>
+        <div class="subExercize" data-options="{'solution':'multiplier'}" data-target="balance"><div class="status"></div>Укажите в электронном балансе множители баланса</div>
+        <div class="subExercize" data-options="{'solution':{'KMnO4':2, 'SO2':5, 'MnSO4':2, 'H2O':1, 'K2SO4':1, 'H2SO4':1}, 'editable':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты в уравнении перед веществами, содержащими атомы окислителя и восстановителя в неповторяющихся степенях окисления</div>
+        <div class="subExercize" data-options="{'solution':'coeffsAll'}" data-target="reaction"><div class="status"></div>Расставьте коэффициенты перед остальными веществами в уравнении</div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 20. Окислители и восстановители, продолжение</h1>
+    <p>Рассмотрим реакцию:</p>
+    Zn + H2SO4 ⇒ ZnSO4 + H2S + H2O
+    <p>Расставим степени окисления и найдем какие атомы и как меняли степень окисления:</p>
+    Zn(0) + H(+1)2S(+6)O(-2)4 ⇒ Zn(+2)S(+6)O(-2)4 + H(+1)2S(-2) + H(+1)2O(-2)
+    <p>Обратите внимание на степени окисления серы:</p>
+    <div class="reaction"><div class="compound"><div class="elem">Zn<sup>0</sup></div></div> + <div class="compound"><div class="elem">H<sup>+1</sup><sub>2</sub></div><div class="elem">S<sup class="hl">+6</sup></div><div class="elem">O<sup>-2</sup><sub>4</sub></div></div> ⟶ <div class="compound"><div class="elem">Zn<sup>+2</sup></div><div class="elem">S<sup class="hl">+6</sup></div><div class="elem">O<sup>-2</sup><sub>4</sub></div></div> + <div class="compound"><div class="elem">H<sup>+1</sup><sub>2</sub></div><div class="elem">S<sup class="hl">-2</sup></div></div> + <div class="compound"><div class="elem">H<sup>+1</sup><sub>2</sub></div><div class="elem">O<sup>-2</sup></div></div></div>
+    <p>Слева сера присутствует в единственной степени окисления +6, а справа - сразу в двух: +6 и -2. Сера поменяла свою с.о., но не полностью - часть атомов серы осталась в прежней степени окисления. Такое бывает в ОВР довольно часто. То, что не все атомы серы поменяли степень окисления, никак не влияет на баланс:</p>
+    <div class="reaction"><div class="compound"><div class="elem">Zn<sup>0</sup></div></div> + <div class="compound"><div class="elem">H<sup>+1</sup><sub>2</sub></div><div class="elem">S<sup class="hl">+6</sup></div><div class="elem">O<sup>-2</sup><sub>4</sub></div></div> ⟶ <div class="compound"><div class="elem">Zn<sup>+2</sup></div><div class="elem">S<sup class="hl">+6</sup></div><div class="elem">O<sup>-2</sup><sub>4</sub></div></div> + <div class="compound"><div class="elem">H<sup>+1</sup><sub>2</sub></div><div class="elem">S<sup class="hl">-2</sup></div></div> + <div class="compound"><div class="elem">H<sup>+1</sup><sub>2</sub></div><div class="elem">O<sup>-2</sup></div></div></div>
+    <div class="redoxBalance" data-options="{'balance':[['S',6,4],['Zn',0,2]], 'print':'balance'}"></div>
+    <div class="remember">
+      <p>Часть атомов окислителя и/или восстановителя может остаться в начальной степени окисления</p>
+    </div>
+    <p>Обратите внимание на степени окисления кислорода в этой реакции:</p>
+    <div class="reaction"><div class="compound"><div class="elem">S<sup>+4</sup></div><div class="elem">O<sup class="hl">-2</sup><sub>2</sub></div></div> + <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">O<sup class="hl">-1</sup><sub>2</sub></div></div> ⟶ <div class="compound"><div class="elem">H<sub>2</sub></div><div class="elem">S</div><div class="elem">O<sup class="hl">-2</sup><sub>4</sub></div></div></div>
+    <div class="redoxBalance" data-options="{'balance':[['S',4,6],['O',-1,-2]], 'print':'balance'}"></div>
+    <p>Слева кислород присутствовал в двух степенях окисления:&nbsp;-2&nbsp;и&nbsp;-1, а справа только в одной:&nbsp;-2. Отсюда мы можем сделать вывод, что меняли степень окисления атомы&nbsp;O(-1), переходя в&nbsp;O(-2), а тот кислород, что уже сразу был в с.о. -2 так в ней и остался.</p>
+    <div class="remember">
+      <p>Слева элемент может присутствовать сразу в нескольких степенях окисления. Эти степени окисления могут как исчезнуть в ходе реакции, так и остаться.</p>
+    </div>
+    <h2>Задачи</h2>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r1" class="reaction">Al + HNO3 ⇒ Al(NO3)3 + NO2 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-reaction="r1" data-options="{'balance':[['N',5,4],['Al',0,3]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r2" class="reaction">KMnO4 + SO2 + H2O ⇒ K2SO4 + MnSO4 + H2SO4 </div>
+        </div>
+        <div class="redoxBalance" data-reaction="r2" data-options="{'balance':[['Mn',7,2],['S',4,6]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r3" class="reaction">K2Cr2O7 + H2SO4 + KI ⇒ Cr2(SO4)3 + I2 + K2SO4 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-reaction="r3" data-options="{'balance':[['Cr',6,3],['I',-1,0]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div><div id="r4" class="reaction">K2Cr2O7 + H2SO4 + SO2 ⇒ Cr2(SO4)3 + K2SO4 + H2O</div>
+        </div>
+        <div class="redoxBalance" data-reaction="r4" data-options="{'balance':[['Cr',6,3],['S',4,6]]}"></div>
+        <div class="subExercize" data-options="{'solution':'oxiStatesAll'}" data-target="reaction"><div class="status"></div>Расставьте степени окисления у всех атомов в реакции</div>
+        <div class="subExercize" data-options="{'solution':'balance'}" data-target="balance"><div class="status"></div>Выберите в реакци атомы, соответствующие начальной и конечной степеням окисления восстановителя и окислителя</div>
+      </div>
+    </div>
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>

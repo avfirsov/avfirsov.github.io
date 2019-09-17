@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок 26  - Онлайн-Курс Как уравнивать химические реакции</title>
+  <meta name="description" content=""> 
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <script src="js/common.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <div class="menu"><i class="material-icons">menu</i></div>
+    <h1>Урок 6. Реакции посложнее</h1>
+    <h2>Можно ли обойтись без подбора?</h2>
+    <p>В примерах выше мы уравнивали реакции подбирая коэффициенты наугад. А можно ли обойтись без подбора? Существует ли способ сразу найти правильные коэффициенты со стопроцентной точностью, а не методом рандома? К сожалению, в общем случае такого способа не существует. Уравнивание любых реакций, даже самых сложных, включает в себя подбор коэффициентов.</p>
+
+    <p>Сложные реакции с участием 5 и более веществ чаще всего являются ОВР (окислительно-восстановительными реакциями). Для уравнивания ОВР существуют специальные методы: метод электронного баланса и метод полуреакций. В дальнейших уроках мы будем проходить один из них - метод электронного баланса. Но даже в этих методах есть этап подбора коэффициентов. Эти методы не уравнивают реакцию “автоматически”, а лишь сильно упрощают подбор.</p>
+    <h2>Искусство подбора коэффициентов</h2>
+    <p>Как вы уже поняли, от подбора никуда не уйдешь. Поэтому будем осваивать искусство подбора коэффициентов. В этом деле нет точных алгоритмов, есть только базовые рекомендации:</p>
+    <ol>
+      <li><p>Выберите самое сложное по числу входящих элементов вещество (если таких несколько, выберите любое) и пробуйте ставить перед ним разные коэффициенты начиная с&nbsp;<strong>1</strong>, а коэффициенты перед остальными веществами доставляйте так, чтобы добиться равенства элементов слева и справа.</p></li>
+      <li><p>Если коэффициент&nbsp;<strong>1</strong> не подошел, возьмите коэффициент&nbsp;<strong>2</strong>. Если&nbsp;<strong>2</strong> не подошло, возьмите&nbsp;<strong>3</strong>, и так далее.. </p></li>
+    </ol>    
+    <div class="remember"><p>Подбор коэффициентов делается методом проб и ошибок, поэтому не бойтесь совершать ошибки - это совершенно неизбежно! Главное - пробуйте, экспериментируйте с коэффициентами!</p></div>
+    Давайте воспользуемся этими рекомендациями на деле и подберем коэффициенты для реакции:</p>
+    <div id="r1" class="reaction" data-options="{'editable':{'Na2O':'always'}}" style="cursor: pointer;"><div class="compound"><div class="elem">Na<sub>2</sub></div><div class="elem">O</div></div> + <div class="compound"><div class="elem">P<sub>2</sub></div><div class="elem">O<sub>5</sub></div></div> ⟶ <div class="compound"><div class="coefficient hl">1</div><div class="elem">Na<sub>3</sub></div><div class="elem">P</div><div class="elem">O<sub>4</sub></div></div></div>
+    <div class="elementsTable" data-reaction="r1"></div>
+    <p>Самое сложное вещество здесь - Na3PO4. Пусть перед ним будет коэффициент&nbsp;<strong>1</strong> (как стоит сейчас). Попробуем подобрать остальные коэффициенты.</p>
+    
+    <p>Уравняем натрий слева и справа. Справа содержится 3 атома натрия, значит надо чтобы слева их было тоже&nbsp;3. Натрий содержится слева только в одном веществе - Na2O, значит на содержание натрия слева можно влиять только коэффициентом перед этим веществом.</p>
+    <p>Если перед Na2O поставить коэффициент <strong>1</strong>, то слева будет 2 атома натрия, а надо, чтобы их было&nbsp;3.</p> 
+    <p>Если перед Na2O поставить коэффициент <strong>2</strong>, то натриев слева станет уже&nbsp;4! Понятно, что с большими коэффициентами натриев будет становиться слева только больше. Попробуйте поставить коэффициенты&nbsp;<strong>1</strong>,&nbsp;<strong>2</strong>,&nbsp;<strong>3</strong>,&nbsp;<strong>4</strong>, ... перед Na2O в уравнении выше</p>
+    <p>Понятно, что “правильный” коэффициент где-то между <strong>1</strong> и <strong>2</strong>, но нас интересует только целые коэффициенты, а среди целых чисел подходящего нам не существует. Значит, перед Na3PO4 должен быть другой коэффициент. Попробуем поставить перед Na3PO4 коэффициент&nbsp;<strong>2</strong>:</p>
+    <div id="r2" class="reaction" data-options="{'editable':{'Na2O':'always'}}" style="cursor: pointer;"><div class="compound"><div class="elem">Na<sub>2</sub></div><div class="elem">O</div></div> + <div class="compound"><div class="elem">P<sub>2</sub></div><div class="elem">O<sub>5</sub></div></div> ⟶ <div class="compound"><div class="coefficient hl">2</div><div class="elem">Na<sub>3</sub></div><div class="elem">P</div><div class="elem">O<sub>4</sub></div></div></div>
+    <div class="elementsTable" data-reaction="r2"></div>
+  
+    <p>Теперь натрий легко уравнять: для этого достаточно поставить коэффициент <strong>3</strong> перед Na2O. В нашем случае, при этом сразу уравнивается вся реакция. В общем случае, возможно потребовалось бы уравнивать фосфор, меняя коэффициент перед P2O5. Возможно даже оказалось бы, что с коэффициентом <strong>2</strong> перед Na3PO4 фосфор уравнять невозможно и пришлось бы перед Na3PO4 поставить коэффициент&nbsp;<strong>3</strong>, занаво уравнивать натрий и фосфор, а если не подошло бы&nbsp;<strong>3</strong> - поставить&nbsp;<strong>4</strong>, и так далее.. Думаю, идею вы уловили.</p>
+
+    <h2>Задачи</h2>
+    <p>Попробуйте подобрать коэффициенты в следующих&nbsp;4 реакциях (чтобы изменить коэффициент перед веществом, кликните на вещество):</br>
+    <span class="note">Примечание: иногда в химии для записи формул используются квадратные скобки, чтобы выделить их содержимое. По влиянию на индексы, квадратные скобки работают как обычные скобки. Вещества с квадратными скобками называются "<strong>комплексные соединения</strong>" (ударение на "е").</span></p>
+    <div class="exercizes">
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r3" data-options="{'solution':'coeffsAll'}">Al2O3 + N2O5 ⇒ Al(NO3)3</div>
+        </div>
+          <div class="elementsTable" data-reaction="r3"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r4" data-options="{'solution':'coeffsAll'}">CaCl2 + Na3PO4 ⇒ Ca3(PO4)2 + NaCl</div>
+        </div>
+          <div class="elementsTable" data-reaction="r4"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r5" data-options="{'solution':'coeffsAll'}">Ba(OH)2 + AlCl3 ⇒ BaCl2 + Al(OH)3</div>
+        </div>
+          <div class="elementsTable" data-reaction="r5"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r6" data-options="{'solution':'coeffsAll'}">CaCO3 + HCl ⇒ CaCl2 + H2O + CO2</div>
+        </div>
+          <div class="elementsTable" data-reaction="r6"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r7" data-options="{'solution':'coeffsAll'}">NH4Cl + Ca(OH)2 ⇒ CaCl2 + NH3 + H2O</div>
+        </div>
+          <div class="elementsTable" data-reaction="r7"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r8" data-options="{'solution':'coeffsAll'}">ZnCl2 + NaOH ⇒ Zn(OH)2 + NaCl</div>
+        </div>
+          <div class="elementsTable" data-reaction="r8"></div>
+      </div>
+      <div class="exercize">
+        <div class="container">
+          <div class="status"></div>
+          <div class="reaction" id="r9" data-options="{'solution':'coeffsAll'}">ZnCl2 + NaOH ⇒ Na2[Zn(OH)4] + NaCl</div>
+        </div>
+          <div class="elementsTable" data-reaction="r9"></div>
+      </div>
+    </div>
+
+
+  </div>
+<script src="js/templates.js"></script> 
+</body>
+</html>
