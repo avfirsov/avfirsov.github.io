@@ -233,7 +233,7 @@ const twt = document.getElementById('twt');
 
 //TUTLE точно правильный находится
 const TITLE = document.title;
-const URL = window.location.pathname;
+const URL = window.location.href;
 
 
 //Возможно надо будет переделать ссылки
