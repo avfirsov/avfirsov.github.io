@@ -29,7 +29,7 @@ const currentLesson = parseFloat(path.slice(lastSlash).filter(x => !isNaN(x)).jo
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // РАСКОММЕНТИТЬ НА ПРОДЕ                                                                             //
-// if (currentLesson > lastSolvedLesson + 1) document.location.href = `${lastSolvedLesson + 1}.html`; //
+if (currentLesson > lastSolvedLesson + 1) document.location.href = `${lastSolvedLesson + 1}.html`; //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
