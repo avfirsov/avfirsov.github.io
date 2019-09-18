@@ -425,8 +425,11 @@ reactions.forEach( reactionElem => {
   if (exercize) {
     redoxBalance = exercize.querySelector('.redoxBalance'); 
   }
+
   let redoxBalanceObj;
-  if (redoxBalance) {
+  //в одном упражненнии может быть сразу несколько div.reactions - например, в подзадачах,
+  //поэтому если баланс уже размечен - отбой 
+  if (redoxBalance && !redoxBalance.children[0]) {
     const linkToID = redoxBalance.dataset.reaction;
     const reactionDOM = document.getElementById(linkToID);
     redoxBalanceObj = new RedOxBalance({elem: redoxBalance, reactionDOM});
@@ -544,8 +547,9 @@ elementsTables.forEach(elementsTable => {
 
 const redoxBalances = document.querySelectorAll('.redoxBalance'); 
 redoxBalances.forEach(redoxBalance => {
-    //если баланс в упражнении, то мы его уже разметили выше
-    if (redoxBalance.closest('.exercize') || redoxBalance.children[0]) return;
+    //если в балансе уже есть элементы, то мы его уже разметили выше - он либо находится
+    //в упражнении, либо создан в ручную
+    if (redoxBalance.children[0]) return;
     const linkToID = redoxBalance.dataset.reaction;
     const reactionDOM = document.getElementById(linkToID);
     const redoxBalanceObj = new RedOxBalance({elem: redoxBalance, reactionDOM});
