@@ -48,14 +48,14 @@ const COURSE_MAP =
 
 const HEAD_TMPLT = 
 `<link rel="image_src" href="https://avfirsov.github.io/img/shareImg.jpg"/>
-<meta property="og:url" content="${window.location.href}">
-<meta property="og:site_name" content="YOUCANSOLVE.COM">
-<meta property="og:image:secure_url" content="https://avfirsov.github.io/img/shareImg.jpg">
-<meta property="og:image" content="https://avfirsov.github.io/img/shareImg.jpg">
-<meta property="og:type" content="artice">
-<meta property="og:title" content="${document.title}">
-<meta property="og:description" content="${document.querySelector('meta[name="description"]').getAttribute("content")}">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">`
+// <meta property="og:url" content="${window.location.href}">
+// <meta property="og:site_name" content="YOUCANSOLVE.COM">
+// <meta property="og:image:secure_url" content="https://avfirsov.github.io/img/shareImg.jpg">
+// <meta property="og:image" content="https://avfirsov.github.io/img/shareImg.jpg">
+// <meta property="og:type" content="artice">
+// <meta property="og:title" content="${document.title}">
+// <meta property="og:description" content="${document.querySelector('meta[name="description"]').getAttribute("content")}">
 
 
 const BODY_BEFORE_MAIN_CONTENT = 
