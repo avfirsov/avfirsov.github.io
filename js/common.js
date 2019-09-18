@@ -8,7 +8,7 @@ const DOMEN = location.hostname;
 
 //после тестов заменить max-age=${1*365*24*60*60}
 if (!document.cookie) {
-  document.cookie = `domen=${DOMEN};path=/;lastSolvedLesson=2;max-age=${5*60}`;
+  document.cookie = `domen=${DOMEN};path=/;lastSolvedLesson=2;max-age=${1*365*24*60*60}`;
 }
 
 const lastSolvedLesson = +(new Map(document.cookie.split(';').map(x => x.split('=')))).get('lastSolvedLesson') || 2;

@@ -47,7 +47,7 @@ class Exercize {
     });
     this.elem.dispatchEvent(completeEvent);
     //удаляем наблюдателей
-    alert('Андрей молодец!');
+    // alert('Андрей молодец!');
   }
   //возвращает true, если для данной реакции заданы условия правильного решения
   ifHasSolution() {
