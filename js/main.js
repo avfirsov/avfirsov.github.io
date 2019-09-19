@@ -442,7 +442,7 @@ reactions.forEach( reactionElem => {
   //если есть - для такого <exercise>  сделаем отдельный объект, который будет контролировать выполнение подзадач
   //а еще делаем проверку, что снаружи reaction нет <.subExercize> - !reaction.elem.closest('.subExercize')
   //это нужно потому что reaction могут быть внутри <.subExercize> использованы для формулировки заданий
-  if (exercize && exercize.querySelector('.subExercize') && !reaction.elem.closest('.subExercize')) new ComplexExercize({elem: exercize, reaction: reaction, balance: redoxBalanceObj});
+  if (!reactionElem.closest('p') && exercize && exercize.querySelector('.subExercize') && !reaction.elem.closest('.subExercize')) new ComplexExercize({elem: exercize, reaction: reaction, balance: redoxBalanceObj});
 
   ///////////////////////////////////////////////////////////////////////////
   //КОД НИЖЕ ПОКАЗЫВАЕТ СТЕПЕНИ ОКИСЛЕНИЯ ДЛЯ КАЖДОГО ЭЛЕМЕНТА НА СТРАНИЦЕ //
@@ -488,12 +488,13 @@ reactions.forEach( reactionElem => {
   ////////////////////////////////////////////////
   // ======================== установка options //
   //////////////////////////////////////////////// 
-  const options = reactionElem.dataset.options; 
-  // делаем из options объкт и передаем его в set(options)
-  if (options) {
-    const optionsObj = JSON.parse(options.replace(/'/g,'"'));
-    reaction.set(optionsObj);
-  }
+  // const options = reactionElem.dataset.options; 
+  // // делаем из options объкт и передаем его в set(options)
+  // if (options) {
+  //   const optionsObj = JSON.parse(options.replace(/'/g,'"'));
+  //   reaction.set(optionsObj);
+  // }
+  reaction.setPredefined();
   reactionObjects.push(reaction);
 });
 
