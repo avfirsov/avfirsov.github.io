@@ -381,8 +381,8 @@ class Reaction extends Exercize {
         console.groupCollapsed('Adding entry to SOLUTION', elem, solution);
         const newEntry = new SOLUTION_entry(elem, solution);
         this._SOLUTION.push(newEntry);
-        console.log('current SOLUTION:', JSON.parse(JSON.stringify(this._SOLUTION)));
-        console.groupEnd('Adding entry to SOLUTION', elem, solution);
+        // console.log('current SOLUTION:', JSON.parse(JSON.stringify(this._SOLUTION)));
+        // console.groupEnd('Adding entry to SOLUTION', elem, solution);
       }).bind(this);
       //проверяем различные варианты solution
       if (solution == "coeffsAll") {
