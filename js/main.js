@@ -434,7 +434,6 @@ reactions.forEach( reactionElem => {
     const reactionDOM = document.getElementById(linkToID);
     redoxBalanceObj = new RedOxBalance({elem: redoxBalance, reactionDOM});
     redoxBalanceObj.setPredefined();
-    console.error(redoxBalanceObj);
     redoxBalanceObjs.push(redoxBalanceObj);
   }
   
