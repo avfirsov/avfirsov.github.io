@@ -11,7 +11,7 @@ if (!document.cookie) {
   document.cookie = `domen=${DOMEN};path=/;lastSolvedLesson=2;max-age=${1*365*24*60*60}`;
 }
 
-const lastSolvedLesson = +(new Map(document.cookie.split(';').map(x => x.split('=')))).get('lastSolvedLesson') || 2;
+const lastSolvedLesson = +(new Map(document.cookie.split(';').map(x => x.trim().split('=')))).get('lastSolvedLesson') || 2;
 console.log(lastSolvedLesson);
 
 // Задаем механику поведения кнопки Далее
