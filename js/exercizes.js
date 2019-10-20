@@ -1,3 +1,5 @@
+// @ts-check
+
 class ExercizePiece {
   //метод отправки события изменения содержания инпута
   sendTrialEvent() {
