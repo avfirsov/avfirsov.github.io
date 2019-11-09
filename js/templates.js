@@ -77,7 +77,9 @@ const BODY_AFTER_MAIN_CONTENT =
 
 const BODY_AFTER_MAIN_CONTENT_LAST = 
 `<footer>
-  Материал курса, дизайн, верстка, код - <a href="mailto:afirsov410@gmail.com">Андрей Фирсов</a>.</br>Все права защищены. Полное или частичное копирование курса в любых целях запрещено и преследуется по закону.  
+  Следите за новыми курсами в <a href="https://vk.com/firsovchemistry">моей группе в ВК</a>.
+  </br>Материал курса, дизайн, верстка, код - <a href="mailto:afirsov410@gmail.com">Андрей Фирсов</a>.
+  </br>Все права защищены. Полное или частичное копирование курса в любых целях запрещено и преследуется по закону.  
 </footer>` 
 
 document.head.innerHTML += HEAD_TMPLT;
