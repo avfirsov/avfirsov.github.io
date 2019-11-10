@@ -902,7 +902,7 @@ class Reaction extends Exercize {
     if (closeBracketIndexDOM) return closeBracketIndexDOM;
 
     const closeBracketNode = Reaction.getCloseBracketNode(elementDOM, bracketType);
-    closeBracketIndexDOM = document.createElement('div');
+    closeBracketIndexDOM = document.createElement('sub');
     closeBracketIndexDOM.textContent = 1;
     closeBracketNode.after(closeBracketIndexDOM);
     return closeBracketIndexDOM;
